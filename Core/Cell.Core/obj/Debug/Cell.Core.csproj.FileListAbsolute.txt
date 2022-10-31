@@ -1,0 +1,182 @@
+C:\Users\o_malkov\Documents\voobrazilia\Run\Debug\Cell.Core.xml
+C:\Users\o_malkov\Documents\voobrazilia\Run\Debug\Cell.Core.dll
+C:\Users\o_malkov\Documents\voobrazilia\Run\Debug\Cell.Core.pdb
+C:\Users\o_malkov\Documents\voobrazilia\Core\Cell.Core\obj\Debug\Cell.Core.csprojResolveAssemblyReference.cache
+C:\Users\o_malkov\Documents\voobrazilia\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\o_malkov\Documents\voobrazilia\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.Cache
+C:\Users\o_malkov\Documents\voobrazilia\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\o_malkov\Documents\voobrazilia\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\Дмитрий\Documents\voobrazilia\Run\Debug\Cell.Core.xml
+C:\Users\Дмитрий\Documents\voobrazilia\Run\Debug\Cell.Core.dll
+C:\Users\Дмитрий\Documents\voobrazilia\Run\Debug\Cell.Core.pdb
+C:\Users\Дмитрий\Documents\voobrazilia\Core\Cell.Core\obj\Debug\Cell.Core.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Documents\voobrazilia\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\Дмитрий\Documents\voobrazilia\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.Cache
+C:\Users\Дмитрий\Documents\voobrazilia\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\Дмитрий\Documents\voobrazilia\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\o_malkov\Documents\voobrazilia\Server\Run\Debug\Cell.Core.xml
+C:\Users\o_malkov\Documents\voobrazilia\Server\Run\Debug\Cell.Core.dll
+C:\Users\o_malkov\Documents\voobrazilia\Server\Run\Debug\Cell.Core.pdb
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\Cell.Core\obj\Debug\Cell.Core.csprojResolveAssemblyReference.cache
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.Cache
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\o_malkov\Documents\sub_test\Server\Run\Debug\Cell.Core.xml
+C:\Users\o_malkov\Documents\sub_test\Server\Run\Debug\Cell.Core.dll
+C:\Users\o_malkov\Documents\sub_test\Server\Run\Debug\Cell.Core.pdb
+C:\Users\o_malkov\Documents\sub_test\Server\Core\Cell.Core\obj\Debug\Cell.Core.csprojResolveAssemblyReference.cache
+C:\Users\o_malkov\Documents\sub_test\Server\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\o_malkov\Documents\sub_test\Server\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.Cache
+C:\Users\o_malkov\Documents\sub_test\Server\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\o_malkov\Documents\sub_test\Server\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\o_malkov\Documents\myprojects\Server\Run\Debug\Cell.Core.xml
+C:\Users\o_malkov\Documents\myprojects\Server\Run\Debug\Cell.Core.dll
+C:\Users\o_malkov\Documents\myprojects\Server\Run\Debug\Cell.Core.pdb
+C:\Users\o_malkov\Documents\myprojects\Server\Core\Cell.Core\obj\Debug\Cell.Core.csprojResolveAssemblyReference.cache
+C:\Users\o_malkov\Documents\myprojects\Server\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\o_malkov\Documents\myprojects\Server\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.Cache
+C:\Users\o_malkov\Documents\myprojects\Server\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\o_malkov\Documents\myprojects\Server\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\Дмитрий\Documents\main\Server\Run\Debug\Cell.Core.xml
+C:\Users\Дмитрий\Documents\main\Server\Run\Debug\Cell.Core.dll
+C:\Users\Дмитрий\Documents\main\Server\Run\Debug\Cell.Core.pdb
+C:\Users\Дмитрий\Documents\main\Server\Core\Cell.Core\obj\Debug\Cell.Core.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Documents\main\Server\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\Дмитрий\Documents\main\Server\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.Cache
+C:\Users\Дмитрий\Documents\main\Server\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\Дмитрий\Documents\main\Server\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+E:\Asda2Server\Asda2EnglishServer\Server-1\Server\Run\Debug\Cell.Core.xml
+E:\Asda2Server\Asda2EnglishServer\Server-1\Server\Run\Debug\Cell.Core.dll
+E:\Asda2Server\Asda2EnglishServer\Server-1\Server\Run\Debug\Cell.Core.pdb
+E:\Asda2Server\Asda2EnglishServer\Server-1\Server\Core\Cell.Core\obj\Debug\Cell.Core.csprojResolveAssemblyReference.cache
+E:\Asda2Server\Asda2EnglishServer\Server-1\Server\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+E:\Asda2Server\Asda2EnglishServer\Server-1\Server\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.Cache
+E:\Asda2Server\Asda2EnglishServer\Server-1\Server\Core\Cell.Core\obj\Debug\Cell.Core.dll
+E:\Asda2Server\Asda2EnglishServer\Server-1\Server\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+E:\Asda1Server\Asda1Files\Run\Debug\Cell.Core.xml
+E:\Asda1Server\Asda1Files\Run\Debug\Cell.Core.dll
+E:\Asda1Server\Asda1Files\Run\Debug\Cell.Core.pdb
+E:\Asda1Server\Asda1Files\Core\Cell.Core\obj\Debug\Cell.Core.csprojResolveAssemblyReference.cache
+E:\Asda1Server\Asda1Files\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+E:\Asda1Server\Asda1Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.Cache
+E:\Asda1Server\Asda1Files\Core\Cell.Core\obj\Debug\Cell.Core.dll
+E:\Asda1Server\Asda1Files\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+M:\AsdaStoryFiles\Run\Debug\Cell.Core.xml
+M:\AsdaStoryFiles\Run\Debug\Cell.Core.dll
+M:\AsdaStoryFiles\Run\Debug\Cell.Core.pdb
+M:\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csprojAssemblyReference.cache
+M:\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+M:\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+M:\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CoreCompileInputs.cache
+M:\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+M:\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.dll
+M:\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Run\Debug\Cell.Core.xml
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Run\Debug\Cell.Core.dll
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Run\Debug\Cell.Core.pdb
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csprojAssemblyReference.cache
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Run\Debug\Cell.Core.xml
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Run\Debug\Cell.Core.dll
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Run\Debug\Cell.Core.pdb
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Core\Cell.Core\obj\Debug\Cell.Core.csprojAssemblyReference.cache
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Run\Debug\Cell.Core.xml
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Run\Debug\Cell.Core.dll
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Run\Debug\Cell.Core.pdb
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csprojAssemblyReference.cache
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CoreCompileInputs.cache
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Run\Debug\Cell.Core.xml
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Run\Debug\Cell.Core.dll
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Run\Debug\Cell.Core.pdb
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Core\Cell.Core\obj\Debug\Cell.Core.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Run\Debug\Cell.Core.xml
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Run\Debug\Cell.Core.dll
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Run\Debug\Cell.Core.pdb
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csprojAssemblyReference.cache
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CoreCompileInputs.cache
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\anoon\Desktop\Server-Files\Run\Debug\Cell.Core.xml
+C:\Users\anoon\Desktop\Server-Files\Run\Debug\Cell.Core.dll
+C:\Users\anoon\Desktop\Server-Files\Run\Debug\Cell.Core.pdb
+C:\Users\anoon\Desktop\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.AssemblyReference.cache
+C:\Users\anoon\Desktop\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\anoon\Desktop\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+C:\Users\anoon\Desktop\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CoreCompileInputs.cache
+C:\Users\anoon\Desktop\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+C:\Users\anoon\Desktop\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\anoon\Desktop\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Run\Debug\Cell.Core.xml
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Run\Debug\Cell.Core.dll
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Run\Debug\Cell.Core.pdb
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.AssemblyReference.cache
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CoreCompileInputs.cache
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.dll
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\Administrator\Downloads\Server-Files\Run\Debug\Cell.Core.xml
+C:\Users\Administrator\Downloads\Server-Files\Run\Debug\Cell.Core.dll
+C:\Users\Administrator\Downloads\Server-Files\Run\Debug\Cell.Core.pdb
+C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.AssemblyReference.cache
+M:\Server-Files\Run\Debug\Cell.Core.xml
+M:\Server-Files\Run\Debug\Cell.Core.dll
+M:\Server-Files\Run\Debug\Cell.Core.pdb
+M:\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csprojAssemblyReference.cache
+M:\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+M:\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+M:\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CoreCompileInputs.cache
+M:\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+M:\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.dll
+M:\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Run\Debug\Cell.Core.xml
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Run\Debug\Cell.Core.dll
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Run\Debug\Cell.Core.pdb
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.AssemblyReference.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CoreCompileInputs.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Core\Cell.Core\obj\Debug\Cell.Core.pdb
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Run\Debug\Cell.Core.xml
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Run\Debug\Cell.Core.dll
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Run\Debug\Cell.Core.pdb
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Core\Cell.Core\obj\Debug\Cell.Core.csproj.AssemblyReference.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Core\Cell.Core\obj\Debug\Cell.Core.Localization.Cell.Core.resources
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Core\Cell.Core\obj\Debug\Cell.Core.csproj.GenerateResource.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CoreCompileInputs.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Core\Cell.Core\obj\Debug\Cell.Core.csproj.CopyComplete
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Core\Cell.Core\obj\Debug\Cell.Core.dll
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Core\Cell.Core\obj\Debug\Cell.Core.pdb

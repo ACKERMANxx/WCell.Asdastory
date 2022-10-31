@@ -1,0 +1,6 @@
+C:\Users\o_malkov\Documents\voobrazilia\Server\Run\Release\WCell.RealmServerConsole.exe.config
+C:\Users\o_malkov\Documents\voobrazilia\Server\Run\Release\WCell.RealmServerConsole.exe
+C:\Users\o_malkov\Documents\voobrazilia\Server\Run\Release\WCell.RealmServerConsole.pdb
+C:\Users\o_malkov\Documents\voobrazilia\Server\Applications\WCell.RealmServerConsole\obj\Release\WCell.RealmServerConsole.csprojResolveAssemblyReference.cache
+C:\Users\o_malkov\Documents\voobrazilia\Server\Applications\WCell.RealmServerConsole\obj\Release\WCell.RealmServerConsole.exe
+C:\Users\o_malkov\Documents\voobrazilia\Server\Applications\WCell.RealmServerConsole\obj\Release\WCell.RealmServerConsole.pdb

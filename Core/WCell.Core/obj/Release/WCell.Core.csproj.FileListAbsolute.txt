@@ -1,0 +1,3 @@
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\WCell.Core\obj\Release\WCell.Core.csprojResolveAssemblyReference.cache
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\WCell.Core\obj\Release\WCell.Core.Localization.WCell.Core.resources
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\WCell.Core\obj\Release\WCell.Core.csproj.GenerateResource.Cache

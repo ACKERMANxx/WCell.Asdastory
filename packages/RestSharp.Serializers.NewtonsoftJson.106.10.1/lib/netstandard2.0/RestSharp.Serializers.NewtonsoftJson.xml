@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RestSharp.Serializers.NewtonsoftJson</name>
+    </assembly>
+    <members>
+        <member name="M:RestSharp.Serializers.NewtonsoftJson.JsonNetSerializer.#ctor">
+            <summary>
+            Create the new serializer that uses Json.Net with default settings
+            </summary>
+        </member>
+        <member name="M:RestSharp.Serializers.NewtonsoftJson.JsonNetSerializer.#ctor(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Create the new serializer that uses Json.Net with custom settings
+            </summary>
+            <param name="settings">Json.Net serializer settings</param>
+        </member>
+        <member name="M:RestSharp.Serializers.NewtonsoftJson.RestClientExtensions.UseNewtonsoftJson(RestSharp.IRestClient)">
+            <summary>
+            Use Json.Net serializer with default settings
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Serializers.NewtonsoftJson.RestClientExtensions.UseNewtonsoftJson(RestSharp.IRestClient,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Use Json.Net serializer with custom settings
+            </summary>
+            <param name="client"></param>
+            <param name="settings">Json.Net serializer settings</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

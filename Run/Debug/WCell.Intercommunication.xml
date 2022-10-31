@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WCell.Intercommunication</name>
+    </assembly>
+    <members>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.Name">
+            <summary>
+            The name of the role.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.Status">
+            <summary>
+            What kind of status this roll represents
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.MaySkipAuthQueue">
+            <summary>
+            Whether the User may login, even if the server is full.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.ScrambleChat">
+            <summary>
+            Whether the player's chat will be scrambled
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.AppearAsGM">
+            <summary>
+            Whether or not the role makes the player a GM.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.AppearAsQA">
+            <summary>
+            Whether or not the role makes the player a QA.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.Rank">
+            <summary>
+            The actual Rank of this Role
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.CanUseCommandsOnOthers">
+            <summary>
+            Whether this Role is allowed to call commands on others (eg. using double prefix)
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.CanHandleTickets">
+            <summary>
+            Whether this Role sees ticket information and can handle tickets
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.InheritanceList">
+            <summary>
+            A list of the other roles the role inherits from, permissions-wise.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.IRoleGroup.CommandNames">
+            <summary>
+            A list of the names of all allowed Commands.
+            </summary>
+        </member>
+        <member name="T:WCell.Intercommunication.DataTypes.AuthenticationInfo">
+            <summary>
+            Holds authentication information
+            </summary>
+        </member>
+        <member name="F:WCell.Intercommunication.DataTypes.AuthenticationInfo.SessionKey">
+            <summary>
+            Session key used for the session
+            </summary>
+        </member>
+        <member name="F:WCell.Intercommunication.DataTypes.AuthenticationInfo.Salt">
+            <summary>
+            Salt used for the session
+            </summary>
+        </member>
+        <member name="F:WCell.Intercommunication.DataTypes.AuthenticationInfo.Verifier">
+            <summary>
+            Verifier used for the session
+            </summary>
+        </member>
+        <member name="F:WCell.Intercommunication.DataTypes.AuthenticationInfo.SystemInformation">
+            <summary>
+            System information of the client
+            </summary>
+        </member>
+        <member name="F:WCell.Intercommunication.DataTypes.RoleGroupInfo.HighestRole">
+            <summary>
+            Represents the highest role that has been loaded (usually: Owner).
+            </summary>
+        </member>
+        <member name="F:WCell.Intercommunication.DataTypes.RoleGroupInfo.LowestRole">
+            <summary>
+            Represents the lowest role that has been loaded (usually: Guest).
+            </summary>
+        </member>
+        <member name="F:WCell.Intercommunication.DataTypes.RoleGroupInfo.AllCommands">
+            <summary>
+            Represents the command name that allows all commands for a Role.
+            </summary>
+        </member>
+        <member name="F:WCell.Intercommunication.DataTypes.RoleGroupInfo.StatusCommands">
+            <summary>
+            Represents the command name that allows all Commands that belong to the Role's status by default.
+            </summary>
+        </member>
+        <member name="M:WCell.Intercommunication.DataTypes.RoleGroupInfo.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:WCell.Intercommunication.DataTypes.RoleGroupInfo.#ctor(System.String,System.Int32,WCell.Intercommunication.DataTypes.RoleStatus,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String[])">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="roleName">the name of the role</param>
+            <param name="gm">whether or not this role makes you a GM</param>
+            <param name="qa">whether or not this role makes you a QA</param>
+            <param name="inherits">the other roles this role inherits from</param>
+        </member>
+        <member name="M:WCell.Intercommunication.DataTypes.RoleGroupInfo.#ctor(System.String,System.Int32,WCell.Intercommunication.DataTypes.RoleStatus,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String[],System.String[])">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="roleName">the name of the role</param>
+            <param name="gm">whether or not this role makes you a GM</param>
+            <param name="qa">whether or not this role makes you a QA</param>
+            <param name="inherits">the other roles this role inherits from</param>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.Name">
+            <summary>
+            The name of the role.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.Status">
+            <summary>
+            What kind of status this roll represents
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.MaySkipAuthQueue">
+            <summary>
+            Whether the User may login, even if the server is full.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.ScrambleChat">
+            <summary>
+            Whether the player's chat will be scrambled
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.AppearAsGM">
+            <summary>
+            Whether or not the role makes the player a GM.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.AppearAsQA">
+            <summary>
+            Whether or not the role makes the player a QA.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.Rank">
+            <summary>
+            The actual Rank of this Role
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.CanUseCommandsOnOthers">
+            <summary>
+            Whether this Role is allowed to call commands on others (eg. using double prefix)
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.CanHandleTickets">
+            <summary>
+            Whether this Role sees ticket information and can handle tickets
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.InheritanceList">
+            <summary>
+            A list of the other roles the role inherits from, permissions-wise.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.DataTypes.RoleGroupInfo.CommandNames">
+            <summary>
+            A list of the names of all allowed Commands.
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.FullAccountInfo.AccountId">
+            <summary>
+            ID of this account
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.FullAccountInfo.EmailAddress">
+            <summary>
+            E-mail address of this account
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.FullAccountInfo.RoleGroupName">
+            <summary>
+            The name of the Account's RoleGroup
+            </summary>
+        </member>
+        <member name="T:WCell.Intercommunication.AccountInfo">
+            <summary>
+            Holds information about an account
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.AccountInfo.AccountId">
+            <summary>
+            ID of this account
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.AccountInfo.EmailAddress">
+            <summary>
+            E-mail address of this account
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.AccountInfo.RoleGroupName">
+            <summary>
+            The name of the Account's RoleGroup
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.IAccountInfo.AccountId">
+            <summary>
+            ID of this account
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.IAccountInfo.EmailAddress">
+            <summary>
+            E-mail address of this account
+            </summary>
+        </member>
+        <member name="P:WCell.Intercommunication.IAccountInfo.RoleGroupName">
+            <summary>
+            The name of the Account's RoleGroup
+            </summary>
+        </member>
+    </members>
+</doc>

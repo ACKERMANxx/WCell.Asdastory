@@ -1,0 +1,5 @@
+C:\Users\o_malkov\Documents\voobrazilia\Server\Run\Release\WCell.Intercommunication.dll
+C:\Users\o_malkov\Documents\voobrazilia\Server\Run\Release\WCell.Intercommunication.pdb
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\WCell.Intercommunication\obj\Release\WCell.Intercommunication.csprojResolveAssemblyReference.cache
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\WCell.Intercommunication\obj\Release\WCell.Intercommunication.dll
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\WCell.Intercommunication\obj\Release\WCell.Intercommunication.pdb

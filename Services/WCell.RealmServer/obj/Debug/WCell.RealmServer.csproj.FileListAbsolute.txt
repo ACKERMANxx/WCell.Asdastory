@@ -1,0 +1,130 @@
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Run\Debug\WCell.RealmServer.dll.config
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Run\Debug\WCell.RealmServer.xml
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Run\Debug\WCell.RealmServer.dll
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Run\Debug\WCell.RealmServer.pdb
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csprojAssemblyReference.cache
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Run\Debug\WCell.RealmServer.dll.config
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Run\Debug\WCell.RealmServer.xml
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Run\Debug\WCell.RealmServer.dll
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Run\Debug\WCell.RealmServer.pdb
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csprojAssemblyReference.cache
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+C:\Users\loverteam\Desktop\New\AsdaStoryFiles - Copy - Copy\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Run\Debug\WCell.RealmServer.dll.config
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Run\Debug\WCell.RealmServer.xml
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Run\Debug\WCell.RealmServer.dll
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Run\Debug\WCell.RealmServer.pdb
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csprojAssemblyReference.cache
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CoreCompileInputs.cache
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Run\Debug\WCell.RealmServer.dll.config
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Run\Debug\WCell.RealmServer.xml
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Run\Debug\WCell.RealmServer.dll
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Run\Debug\WCell.RealmServer.pdb
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+C:\Users\Administrator\Desktop\AsdaStoryBackUp_070820\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Run\Debug\WCell.RealmServer.dll.config
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Run\Debug\WCell.RealmServer.xml
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Run\Debug\WCell.RealmServer.dll
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Run\Debug\WCell.RealmServer.pdb
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csprojAssemblyReference.cache
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CoreCompileInputs.cache
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+C:\Users\a7720\Downloads\AsdaStoryBackUp_090820\AsdaStory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+C:\Users\anoon\Desktop\Server-Files\Run\Debug\WCell.RealmServer.dll.config
+C:\Users\anoon\Desktop\Server-Files\Run\Debug\WCell.RealmServer.xml
+C:\Users\anoon\Desktop\Server-Files\Run\Debug\WCell.RealmServer.dll
+C:\Users\anoon\Desktop\Server-Files\Run\Debug\WCell.RealmServer.pdb
+C:\Users\anoon\Desktop\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.AssemblyReference.cache
+C:\Users\anoon\Desktop\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+C:\Users\anoon\Desktop\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+C:\Users\anoon\Desktop\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CoreCompileInputs.cache
+C:\Users\anoon\Desktop\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+C:\Users\anoon\Desktop\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+C:\Users\anoon\Desktop\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Run\Debug\WCell.RealmServer.dll.config
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Run\Debug\WCell.RealmServer.xml
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Run\Debug\WCell.RealmServer.dll
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Run\Debug\WCell.RealmServer.pdb
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.AssemblyReference.cache
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CoreCompileInputs.cache
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+D:\Download\AsdaStoryFiles\AsdaFullFile\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+C:\Users\Administrator\Downloads\Server-Files\Run\Debug\WCell.RealmServer.dll.config
+C:\Users\Administrator\Downloads\Server-Files\Run\Debug\WCell.RealmServer.xml
+C:\Users\Administrator\Downloads\Server-Files\Run\Debug\WCell.RealmServer.dll
+C:\Users\Administrator\Downloads\Server-Files\Run\Debug\WCell.RealmServer.pdb
+C:\Users\Administrator\Downloads\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+C:\Users\Administrator\Downloads\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+C:\Users\Administrator\Downloads\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+C:\Users\Administrator\Downloads\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+C:\Users\Administrator\Downloads\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+M:\Server-Files\Run\Debug\WCell.RealmServer.dll.config
+M:\Server-Files\Run\Debug\WCell.RealmServer.xml
+M:\Server-Files\Run\Debug\WCell.RealmServer.dll
+M:\Server-Files\Run\Debug\WCell.RealmServer.pdb
+M:\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csprojAssemblyReference.cache
+M:\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+M:\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+M:\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CoreCompileInputs.cache
+M:\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+M:\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+M:\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+M:\AsdaStoryFiles\Run\Debug\WCell.RealmServer.dll.config
+M:\AsdaStoryFiles\Run\Debug\WCell.RealmServer.xml
+M:\AsdaStoryFiles\Run\Debug\WCell.RealmServer.dll
+M:\AsdaStoryFiles\Run\Debug\WCell.RealmServer.pdb
+M:\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csprojAssemblyReference.cache
+M:\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+M:\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+M:\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CoreCompileInputs.cache
+M:\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+M:\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+M:\AsdaStoryFiles\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Run\Debug\WCell.RealmServer.dll.config
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Run\Debug\WCell.RealmServer.xml
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Run\Debug\WCell.RealmServer.dll
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Run\Debug\WCell.RealmServer.pdb
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.AssemblyReference.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CoreCompileInputs.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Run\Debug\WCell.RealmServer.dll.config
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Run\Debug\WCell.RealmServer.xml
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Run\Debug\WCell.RealmServer.dll
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Run\Debug\WCell.RealmServer.pdb
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.AssemblyReference.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.Res.WCell.RealmServer.resources
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.GenerateResource.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CoreCompileInputs.cache
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.csproj.CopyComplete
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.dll
+C:\Users\Un\OneDrive\Desktop\New folder\Asdastory\Server-Files1\Services\WCell.RealmServer\obj\Debug\WCell.RealmServer.pdb

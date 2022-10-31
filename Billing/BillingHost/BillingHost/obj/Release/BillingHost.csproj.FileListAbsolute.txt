@@ -1,0 +1,14 @@
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\BillingHost.exe.config
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\Scripts\angular.js
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\Scripts\app.js
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\Scripts\ui-bootstrap-tpls-0.4.0.js
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\Views\ApplyDonation.html
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\BillingHost.exe
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\BillingHost.pdb
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\EntityFramework.dll
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\Nancy.dll
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\Nancy.Hosting.Self.dll
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Release\EntityFramework.xml
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\obj\Release\BillingHost.csprojResolveAssemblyReference.cache
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\obj\Release\BillingHost.exe
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\obj\Release\BillingHost.pdb

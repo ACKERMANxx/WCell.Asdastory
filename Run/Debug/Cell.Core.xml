@@ -1,0 +1,1070 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cell.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Cell.Core.ArrayBuffer">
+            <summary>
+            Defines a wrapper for a chunk of memory that may be split into smaller, logical segments.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ArrayBuffer.#ctor(System.Byte[])">
+            <summary>
+            Creates an ArrayBuffer that is wrapping a pre-existing buffer.
+            </summary>
+            <param name="arr">the buffer to wrap</param>
+        </member>
+        <member name="M:Cell.Core.ArrayBuffer.#ctor(Cell.Core.BufferManager,System.Int32)">
+            <summary>
+            Creates an ArrayBuffer and allocates a new buffer for usage.
+            </summary>
+            <param name="mgr">the <see cref="T:Cell.Core.BufferManager" /> which allocated this array</param>
+        </member>
+        <member name="T:Cell.Core.BufferManager">
+             <summary>
+             Manages a pool of small buffers allocated from large, contiguous chunks of memory.
+             </summary>
+             <remarks>
+             When used in an async network call, a buffer is pinned. Large numbers of pinned buffers
+             cause problem with the GC (in particular it causes heap fragmentation).
+            
+             This class maintains a set of large segments and gives clients pieces of these
+             segments that they can use for their buffers. The alternative to this would be to
+             create many small arrays which it then maintained. This methodology should be slightly
+             better than the many small array methodology because in creating only a few very
+             large objects it will force these objects to be placed on the LOH. Since the
+             objects are on the LOH they are at this time not subject to compacting which would
+             require an update of all GC roots as would be the case with lots of smaller arrays
+             that were in the normal heap.
+             </remarks>
+        </member>
+        <member name="F:Cell.Core.BufferManager.Tiny">
+            <summary>
+            Default BufferManager for small buffers with up to 128 bytes length
+            </summary>
+        </member>
+        <member name="F:Cell.Core.BufferManager.Small">
+            <summary>
+            Default BufferManager for small buffers with up to 1kb length
+            </summary>
+        </member>
+        <member name="F:Cell.Core.BufferManager.Default">
+            <summary>
+            Default BufferManager for default-sized buffers (usually up to 8kb)
+            </summary>
+        </member>
+        <member name="F:Cell.Core.BufferManager.Large">
+            <summary>
+            Large BufferManager for buffers up to 64kb size
+            </summary>
+        </member>
+        <member name="F:Cell.Core.BufferManager.ExtraLarge">
+            <summary>
+            Extra Large BufferManager holding 512kb buffers
+            </summary>
+        </member>
+        <member name="F:Cell.Core.BufferManager.SuperSized">
+            <summary>
+            Super Large BufferManager holding 1MB buffers
+            </summary>
+        </member>
+        <member name="F:Cell.Core.BufferManager.GlobalAllocatedMemory">
+            <summary>
+            Holds the total amount of memory allocated by all buffer managers.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.BufferManager._segmentCount">
+            <summary>
+            Count of segments per Buffer
+            </summary>
+        </member>
+        <member name="F:Cell.Core.BufferManager._segmentSize">
+            <summary>
+            Segment size
+            </summary>
+        </member>
+        <member name="F:Cell.Core.BufferManager._totalSegmentCount">
+            <summary>
+            Total count of segments in all buffers
+            </summary>
+        </member>
+        <member name="P:Cell.Core.BufferManager.AvailableSegmentsCount">
+            <summary>
+            The number of currently available segments
+            </summary>
+        </member>
+        <member name="P:Cell.Core.BufferManager.TotalBufferCount">
+            <summary>
+            The total number of currently allocated buffers.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.BufferManager.TotalSegmentCount">
+            <summary>
+            The total number of currently allocated segments.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.BufferManager.TotalAllocatedMemory">
+            <summary>
+            The total amount of all currently allocated buffers.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.BufferManager.SegmentSize">
+            <summary>
+            The size of a single segment
+            </summary>
+        </member>
+        <member name="M:Cell.Core.BufferManager.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructs a new <see cref="F:Cell.Core.BufferManager.Default"></see> object
+            </summary>
+            <param name="segmentCount">The number of chunks tocreate per segment</param>
+            <param name="segmentSize">The size of a chunk in bytes</param>
+        </member>
+        <member name="M:Cell.Core.BufferManager.CheckOut">
+            <summary>
+            Checks out a segment, creating more if the pool is empty.
+            </summary>
+            <returns>a BufferSegment object from the pool</returns>
+        </member>
+        <member name="M:Cell.Core.BufferManager.CheckOutStream">
+            <summary>
+            Checks out a segment, and wraps it with a SegmentStream, creating more if the pool is empty.
+            </summary>
+            <returns>a SegmentStream object wrapping the BufferSegment taken from the pool</returns>
+        </member>
+        <member name="M:Cell.Core.BufferManager.CheckIn(Cell.Core.BufferSegment)">
+            <summary>
+            Requeues a segment into the buffer pool.
+            </summary>
+            <param name="segment">the segment to requeue</param>
+        </member>
+        <member name="M:Cell.Core.BufferManager.CreateBuffer">
+            <summary>
+            Creates a new buffer and adds the segments to the buffer pool.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.BufferManager.GetSegment(System.Int32)">
+            <summary>
+            Returns a BufferSegment that is at least of the given size.
+            </summary>
+            <param name="payloadSize"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">In case that the payload exceeds the SegmentSize of the largest buffer available.</exception>
+        </member>
+        <member name="M:Cell.Core.BufferManager.GetSegmentStream(System.Int32)">
+            <summary>
+            Returns a SegmentStream that is at least of the given size.
+            </summary>
+            <param name="payloadSize"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">In case that the payload exceeds the SegmentSize of the largest buffer available.</exception>
+        </member>
+        <member name="P:Cell.Core.BufferSegment.Item(System.Int32)">
+            <summary>
+            Returns the byte as the given index within this segment.
+            </summary>
+            <param name="i">the offset in this segment to go</param>
+            <returns>the byte at the index, or 0 if the index is out-of-bounds</returns>
+        </member>
+        <member name="P:Cell.Core.BufferSegment.SegmentData">
+            <summary>
+            Returns a deep-copy of the data mapped to this segment.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.BufferSegment.Uses">
+            <summary>
+            The number of users still using this segment.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.BufferSegment.Number">
+            <summary>
+            Unique segment identifier.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.BufferSegment.CopyFrom(System.Byte[],System.Int32)">
+            <summary>
+            Copies the contents of the given array into this segment at the given offset.
+            </summary>
+            <param name="bytes">the buffer to read from</param>
+            <param name="offset">the offset to start reading from</param>
+            <exception cref="T:System.ArgumentException">an ArgumentException will be thrown if offset is greater than
+            the length of the buffer</exception>
+        </member>
+        <member name="M:Cell.Core.BufferSegment.CopyTo(Cell.Core.BufferSegment,System.Int32)">
+            <summary>
+            Copys the data in this segment to another <see cref="T:Cell.Core.BufferSegment" />.
+            </summary>
+            <param name="segment">the <see cref="T:Cell.Core.BufferSegment" /> instance to copy to</param>
+            <param name="length">the amount of bytes to copy from this segment</param>
+            <exception cref="T:System.ArgumentException">an ArgumentException will be thrown if length is greater than
+            the length of the segment</exception>
+        </member>
+        <member name="M:Cell.Core.BufferSegment.IncrementUsage">
+            <summary>
+            Increments the usage counter of this segment.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.BufferSegment.DecrementUsage">
+            <summary>
+            Decrements the usage counter of this segment.
+            </summary>
+            <remarks>When the usage counter reaches 0, the segment will be 
+            returned to the buffer pool.</remarks>
+        </member>
+        <member name="M:Cell.Core.BufferSegment.CreateSegment(System.Byte[])">
+            <summary>
+            Creates a new BufferSegment for the given buffer.
+            </summary>
+            <param name="bytes">the buffer to wrap</param>
+            <returns>a new BufferSegment wrapping the given buffer</returns>
+            <remarks>This will also create an underlying ArrayBuffer to pin the buffer
+            for the BufferSegment.  The ArrayBuffer will be disposed when the segment
+            is released.</remarks>
+        </member>
+        <member name="M:Cell.Core.BufferSegment.CreateSegment(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Creates a new BufferSegment for the given buffer.
+            </summary>
+            <param name="bytes">the buffer to wrap</param>
+            <param name="offset">the offset of the buffer to read from</param>
+            <param name="length">the length of the data to read</param>
+            <returns>a new BufferSegment wrapping the given buffer</returns>
+            <remarks>This will also create an underlying ArrayBuffer to pin the buffer
+            for the BufferSegment.  The ArrayBuffer will be disposed when the segment
+            is released.</remarks>
+        </member>
+        <member name="T:Cell.Core.CellDef">
+            <summary>
+            Global constants for the Cell framework.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.CellDef.CORE_LOG_FNAME">
+            <summary>
+            File name for the Cell framework error file.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.CellDef.SVER">
+            <summary>
+            Internal version string.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.CellDef.VER">
+            <summary>
+            Internal version number.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.CellDef.MAX_PBUF_SEGMENT_SIZE">
+            <summary>
+            Maximum size of a packet buffer segment
+            </summary>
+        </member>
+        <member name="F:Cell.Core.CellDef.PBUF_SEGMENT_COUNT">
+            <summary>
+            Maximum size of a packet buffer segment.
+            </summary>
+        </member>
+        <member name="T:Cell.Core.ClientBase">
+            <summary>
+            Base class for all clients.
+            </summary>
+            <seealso cref="T:Cell.Core.ServerBase"/>
+        </member>
+        <member name="F:Cell.Core.ClientBase._totalBytesReceived">
+            <summary>
+            Total number of bytes that have been received by all clients.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ClientBase._totalBytesSent">
+            <summary>
+            Total number of bytes that have been sent by all clients.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ClientBase.TotalBytesSent">
+            <summary>
+            Gets the total number of bytes sent to all clients.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ClientBase.TotalBytesReceived">
+            <summary>
+            Gets the total number of bytes received by all clients.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ClientBase._bytesReceived">
+            <summary>
+            Number of bytes that have been received by this client.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ClientBase._bytesSent">
+            <summary>
+            Number of bytes that have been sent by this client.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ClientBase._tcpSock">
+            <summary>
+            The socket containing the TCP connection this client is using.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ClientBase._server">
+            <summary>
+            Pointer to the server this client is connected to.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ClientBase._udpEndpoint">
+            <summary>
+            The port the client should receive UDP datagrams on.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ClientBase._bufferSegment">
+            <summary>
+            The buffer containing the data received.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ClientBase._remainingLength">
+            <summary>
+            The offset in the buffer to write at.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ClientBase.#ctor(Cell.Core.ServerBase)">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="server">The server this client is connected to.</param>
+        </member>
+        <member name="P:Cell.Core.ClientBase.ClientAddress">
+            <summary>
+            Gets the IP address of the client.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ClientBase.Port">
+            <summary>
+            Gets the port the client is communicating on.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ClientBase.UdpEndpoint">
+            <summary>
+            Gets the port the client should receive UDP datagrams on.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ClientBase.TcpSocket">
+            <summary>
+            Gets/Sets the socket this client is using for TCP communication.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ClientBase.BeginReceive">
+            <summary>
+            Begins asynchronous TCP receiving for this client.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ClientBase.ResumeReceive">
+            <summary>
+            Resumes asynchronous TCP receiving for this client.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ClientBase.OnReceive">
+            <summary>
+            Called when a packet has been received and needs to be processed.
+            </summary>
+            <param name="numBytes">The size of the packet in bytes.</param>
+        </member>
+        <member name="M:Cell.Core.ClientBase.Send(System.Byte[])">
+            <summary>
+            Asynchronously sends a packet of data to the client.
+            </summary>
+            <param name="packet">An array of bytes containing the packet to be sent.</param>
+        </member>
+        <member name="M:Cell.Core.ClientBase.Send(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Asynchronously sends a packet of data to the client.
+            </summary>
+            <param name="packet">An array of bytes containing the packet to be sent.</param>
+            <param name="length">The number of bytes to send starting at offset.</param>
+            <param name="offset">The offset into packet where the sending begins.</param>
+        </member>
+        <member name="M:Cell.Core.ClientBase.Connect(System.String,System.Int32)">
+            <summary>
+            Connects the client to the server at the specified address and port.
+            </summary>
+            <remarks>This function uses IPv4.</remarks>
+            <param name="host">The IP address of the server to connect to.</param>
+            <param name="port">The port to use when connecting to the server.</param>
+        </member>
+        <member name="M:Cell.Core.ClientBase.Connect(System.Net.IPAddress,System.Int32)">
+            <summary>
+            Connects the client to the server at the specified address and port.
+            </summary>
+            <remarks>This function uses IPv4.</remarks>
+            <param name="addr">The IP address of the server to connect to.</param>
+            <param name="port">The port to use when connecting to the server.</param>
+        </member>
+        <member name="M:Cell.Core.ByteArrHelper.SetBytes(System.Byte[],System.UInt32,System.Byte[])">
+            <summary>
+            Sets the given bytes in the given array at the given index
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ByteArrHelper.SetUShortBE(System.Byte[],System.UInt32,System.UInt16)">
+            <summary>
+            Sets the ushort in opposite byte-order in the given array at the given index
+            </summary>
+        </member>
+        <member name="P:Cell.Core.IClient.ClientAddress">
+            <summary>
+            Gets the IP address of the client.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.IClient.Port">
+            <summary>
+            Gets the port the client is communicating on.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.IClient.UdpEndpoint">
+            <summary>
+            Gets the port the client should receive UDP datagrams on.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.IClient.TcpSocket">
+            <summary>
+            Gets/Sets the socket this client is using for TCP communication.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.IClient.BeginReceive">
+            <summary>
+            Begins asynchronous TCP receiving for this client.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.IClient.Send(System.Byte[])">
+            <summary>
+            Asynchronously sends a packet of data to the client.
+            </summary>
+            <param name="packet">An array of bytes containing the packet to be sent.</param>
+        </member>
+        <member name="M:Cell.Core.IClient.SendCopy(System.Byte[])">
+            <summary>
+            Asynchronously sends a copy of the given packet
+            </summary>
+            <param name="packet">An array of bytes containing the packet to be sent.</param>
+        </member>
+        <member name="M:Cell.Core.IClient.Send(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Asynchronously sends a packet of data to the client.
+            </summary>
+            <param name="packet">An array of bytes containing the packet to be sent.</param>
+            <param name="length">The number of bytes to send starting at offset.</param>
+            <param name="offset">The offset into packet where the sending begins.</param>
+        </member>
+        <member name="M:Cell.Core.IClient.Send(Cell.Core.BufferSegment,System.Int32)">
+            <summary>
+            Sends the content of the given segment to the Client.
+            </summary>
+            <param name="segment"></param>
+        </member>
+        <member name="M:Cell.Core.IClient.Connect(System.String,System.Int32)">
+            <summary>
+            Connects the client to the server at the specified address and port.
+            </summary>
+            <remarks>This function uses IPv4.</remarks>
+            <param name="host">The IP address of the server to connect to.</param>
+            <param name="port">The port to use when connecting to the server.</param>
+        </member>
+        <member name="M:Cell.Core.IClient.Connect(System.Net.IPAddress,System.Int32)">
+            <summary>
+            Connects the client to the server at the specified address and port.
+            </summary>
+            <remarks>This function uses IPv4.</remarks>
+            <param name="addr">The IP address of the server to connect to.</param>
+            <param name="port">The port to use when connecting to the server.</param>
+        </member>
+        <member name="T:Cell.Core.Localization.Cell_Core">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.BaseStart">
+            <summary>
+              Looks up a localized string similar to Starting the network layer!.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.BaseStop">
+            <summary>
+              Looks up a localized string similar to Stopping the network layer!.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.ClientConnected">
+            <summary>
+              Looks up a localized string similar to Connected.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.ClientDisconnected">
+            <summary>
+              Looks up a localized string similar to Disconnected.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.FatalAsyncAccept">
+            <summary>
+              Looks up a localized string similar to Encountered a fatal error while trying to accept a connection. You might have to restart the server..
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.InvalidEndpoint">
+            <summary>
+              Looks up a localized string similar to Listening endpoint is invalid! Check your configuration and make sure the address and port are valid! Endpoint: {0}.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.ListeningTCPSocket">
+            <summary>
+              Looks up a localized string similar to Listening to TCP socket on {0}.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.ListeningTCPSocketStopped">
+            <summary>
+              Looks up a localized string similar to TCP Listen socket for port {0} closed.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.ListeningUDPSocket">
+            <summary>
+              Looks up a localized string similar to Listening to UDP socket on {0}.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.NoNetworkAdapters">
+            <summary>
+              Looks up a localized string similar to No network adapters are available on the system!.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.PathCannotBeNull">
+            <summary>
+              Looks up a localized string similar to Path cannot be be null or empty.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.ReadyForConnections">
+            <summary>
+              Looks up a localized string similar to Server is ready for connections!.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.ServerNotRunning">
+            <summary>
+              Looks up a localized string similar to Server is no longer accepting connections!.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.Localization.Cell_Core.SocketExceptionAsyncAccept">
+            <summary>
+              Looks up a localized string similar to Encountered a socket exception while trying to accept a connection!.
+            </summary>
+        </member>
+        <member name="T:Cell.Core.ObjectPoolMgr">
+            <summary>
+            This class manages objects in a pool to maximize memory (de)allocation efficiency.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ObjectPoolMgr.Pools">
+            <summary>
+            A list of types of objects the pool contains.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ObjectPoolMgr.ContainsType``1">
+            <summary>
+            Returns true if the specified type is registered.
+            </summary>
+            <typeparam name="T">The type to check registration with.</typeparam>
+            <returns>True if the specified type is registered.</returns>
+        </member>
+        <member name="M:Cell.Core.ObjectPoolMgr.ContainsType(System.Type)">
+            <summary>
+            Returns true if the specified type is registered.
+            </summary>
+            <param name="t">The type to check registration with.</param>
+            <returns>True if the specified type is registered.</returns>
+        </member>
+        <member name="M:Cell.Core.ObjectPoolMgr.RegisterType``1(System.Func{``0})">
+            <summary>
+            Registers an object pool with the specified type.
+            </summary>
+            <param name="func">A pointer to a function that creates new objects.</param>
+            <returns>True if the type already exists or was registered successfully. False if locking the internal pool list timed out.</returns>
+            <remarks>The function waits 3000 milliseconds to aquire the lock of the internal pool list.</remarks>
+        </member>
+        <member name="M:Cell.Core.ObjectPoolMgr.SetMinimumSize``1(System.Int32)">
+            <summary>
+            Sets the minimum number of hard references to be contained in the specified object pool.
+            </summary>
+            <param name="minSize">The minimum number of hard references to be contained in the specified object pool.</param>
+        </member>
+        <member name="M:Cell.Core.ObjectPoolMgr.ReleaseObject``1(``0)">
+            <summary>
+            Releases an object back into the object pool.
+            </summary>
+            <param name="obj">The object to be released.</param>
+        </member>
+        <member name="M:Cell.Core.ObjectPoolMgr.ObtainObject``1">
+            <summary>
+            Obtains an object from the specified object pool.
+            </summary>
+            <returns>If a lock could not be aquired on the object pool null is returned. Otherwise a hard reference to the object requested is returned.</returns>
+        </member>
+        <member name="M:Cell.Core.ObjectPoolMgr.GetPoolInfo``1">
+            <summary>
+            Gets information about the specified object pool.
+            </summary>
+            <returns>An object of type <see cref="T:WCell.Util.ObjectPools.ObjectPoolInfo"/> if the function succeeded, otherwise an object with all values equal to 0 is returned.</returns>
+        </member>
+        <member name="T:Cell.Core.SegmentStream">
+            <summary>
+            Similar to MemoryStream, but with an underlying BufferSegment.
+            Will automatically free the old and get a new segment if its length was exceeded.
+            </summary>
+        </member>
+        <member name="T:Cell.Core.UDPSendToArgs">
+            <summary>
+            Container class for the server object and the client IP.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.UDPSendToArgs.Server">
+            <summary>
+            The server object receiving the UDP communications.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.UDPSendToArgs.ClientIP">
+            <summary>
+            The IP address the data was received from.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.UDPSendToArgs.#ctor(Cell.Core.ServerBase,System.Net.IPEndPoint)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="srvr">The server object receiving the UP communications.</param>
+            <param name="client">The IP address the data was received from.</param>
+        </member>
+        <member name="T:Cell.Core.ClientConnectedHandler">
+            <summary>
+            Handler used for the client connected event
+            </summary>
+            <param name="client">The client connection</param>
+        </member>
+        <member name="T:Cell.Core.ClientDisconnectedHandler">
+            <summary>
+            Handler used for client disconnected event
+            </summary>
+            <param name="client">The client connection</param>
+            <param name="forced">Indicates if the client disconnection was forced</param>
+        </member>
+        <member name="T:Cell.Core.ServerBase">
+            <summary>
+            This is the base class for all server classes.
+            <seealso cref="T:Cell.Core.ClientBase"/>
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ServerBase._clients">
+            <summary>
+            A hashtable containing all of the clients connected to the server.
+            <seealso cref="T:Cell.Core.ClientBase"/>
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ServerBase._tcpEndpoint">
+            <summary>
+            The remote endpoint (IP address and port) of the adapter to use with TCP communiations.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ServerBase._udpEndpoint">
+            <summary>
+            The remote endpoint (IP address and port) of the adapter to use with UDP communiations.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ServerBase._tcpListen">
+            <summary>
+            The socket the server listens on for incoming TCP connections.
+            <seealso cref="M:Cell.Core.ServerBase.Start(System.Boolean,System.Boolean)"/>
+            <seealso cref="P:Cell.Core.ServerBase.TcpIP"/>
+            <seealso cref="P:Cell.Core.ServerBase.TcpPort"/>
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ServerBase._udpListen">
+            <summary>
+            The socket the server listens on for incoming UDP packets.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ServerBase._maxPendingCon">
+            <summary>
+            The maximum number of pending connections.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ServerBase._running">
+            <summary>
+            True if the server is currently accepting connections.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ServerBase.TcpEnabledEnabled">
+            <summary>
+            True if TCP is enabled, default is true.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ServerBase.UdpEnabledEnabled">
+            <summary>
+            True if UDP is enabled, default is false.
+            </summary>
+        </member>
+        <member name="F:Cell.Core.ServerBase._udpBuffer">
+            <summary>
+            The buffer for incoming UDP data.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.IsRunning">
+            <summary>
+            Gets the current status of the server.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.MaximumPendingConnections">
+            <summary>
+            Gets/Sets the maximum number of pending connections.
+            </summary>
+            <value>The maximum number of pending connections.</value>
+        </member>
+        <member name="P:Cell.Core.ServerBase.TcpPort">
+            <summary>
+            Gets/Sets the port the server will listen on for incoming TCP connections.
+            <seealso cref="M:Cell.Core.ServerBase.Start(System.Boolean,System.Boolean)"/>
+            <seealso cref="P:Cell.Core.ServerBase.TcpIP"/>
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.UdpPort">
+            <summary>
+            Gets/Sets the port the server will listen on for incoming UDP connections.
+            <seealso cref="M:Cell.Core.ServerBase.Start(System.Boolean,System.Boolean)"/>
+            <seealso cref="P:Cell.Core.ServerBase.UdpIP"/>
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.TcpIP">
+            <summary>
+            The IP address of the adapter the server will use for TCP communications.
+            <seealso cref="M:Cell.Core.ServerBase.Start(System.Boolean,System.Boolean)"/>
+            <seealso cref="P:Cell.Core.ServerBase.TcpPort"/>
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.UdpIP">
+            <summary>
+            The IP address of the adapter the server will use for UDP communications.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.TcpEndPoint">
+            <summary>
+            The endpoint clients will connect to for TCP connections
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.UdpEndPoint">
+            <summary>
+            The endpoint clients will connect to for UDP connections
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.ClientCount">
+            <summary>
+            Gets the number of clients currently connected to the server.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.RootPath">
+            <summary>
+            The root path of this server assembly.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.TCPEnabled">
+            <summary>
+            Gets/Sets whether or not to use TCP communications.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.UDPEnabled">
+            <summary>
+            Gets/Sets whether or not to use UDP communications.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.ServerBase.UdpCounter">
+            <summary>
+            Holds the sequence number for UDP packets
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ServerBase.Start(System.Boolean,System.Boolean)">
+            <summary>
+            Starts the server and begins accepting connections.
+            <seealso cref="M:Cell.Core.ServerBase.Stop"/>
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ServerBase.Stop">
+            <summary>
+            Stops the server and disconnects all clients.
+            <seealso cref="M:Cell.Core.ServerBase.Start(System.Boolean,System.Boolean)"/>
+            <seealso cref="M:Cell.Core.ServerBase.RemoveAllClients"/>
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ServerBase.CreateClient">
+            <summary>
+            Creates a new client object.
+            <seealso cref="M:Cell.Core.ServerBase.Start(System.Boolean,System.Boolean)"/>
+            </summary>
+            <returns>A client object to wrap an incoming connection.</returns>
+        </member>
+        <member name="M:Cell.Core.ServerBase.RemoveClient(Cell.Core.IClient)">
+            <summary>
+            Removes a client from the internal client list.
+            <seealso cref="M:Cell.Core.ServerBase.RemoveAllClients"/>
+            </summary>
+            <param name="client">The client to be removed</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.DisconnectClient(Cell.Core.IClient,System.Boolean,System.Boolean)">
+            <summary>
+            Disconnects and removes a client.
+            <seealso cref="M:Cell.Core.ServerBase.Stop"/>
+            <seealso cref="M:Cell.Core.ServerBase.RemoveAllClients"/>
+            </summary>
+            <param name="client">The client to be disconnected/removed</param>
+            <param name="forced">Flag indicating if the client was disconnected already</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.RemoveAllClients">
+            <summary>
+            Disconnects all clients currently connected to the server.
+            <seealso cref="M:Cell.Core.ServerBase.Stop"/>
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ServerBase.OnClientConnected(Cell.Core.IClient)">
+            <summary>
+            Called when a client has connected to the server.
+            </summary>
+            <param name="client">The client that has connected.</param>
+            <returns>True if the connection is to be accepted.</returns>
+        </member>
+        <member name="M:Cell.Core.ServerBase.OnClientDisconnected(Cell.Core.IClient,System.Boolean)">
+            <summary>
+            Called when a client has been disconnected from the server.
+            </summary>
+            <param name="client">The client that has been disconnected.</param>
+            <param name="forced">Indicates if the client disconnection was forced</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.VerifyEndpointAddress(System.Net.IPEndPoint)">
+            <summary>
+            Verifies that an endpoint exists as an address on the local network interfaces.
+            </summary>
+            <param name="endPoint">the endpoint to verify</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.GetDefaultExternalIPAddress">
+            <summary>
+            Get the default external IP address for the current machine. This is always the first
+            IP listed in the host address list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cell.Core.ServerBase.StartTCP">
+            <summary>
+            Begin listening for TCP connections. Should not be called directly - instead use <see cref="M:Cell.Core.ServerBase.Start(System.Boolean,System.Boolean)"/>
+            <seealso cref="P:Cell.Core.ServerBase.TCPEnabled"/>
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ServerBase.StopTCP">
+            <summary>
+            Begin listening for TCP connections. Should not be called directly - instead use <see cref="M:Cell.Core.ServerBase.Start(System.Boolean,System.Boolean)"/>
+            <seealso cref="P:Cell.Core.ServerBase.TCPEnabled"/>
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ServerBase.StartUDP">
+            <summary>
+            Begin listening for UDP connections. Should not be called directly - instead use <see cref="M:Cell.Core.ServerBase.Start(System.Boolean,System.Boolean)"/>
+            <seealso cref="P:Cell.Core.ServerBase.TCPEnabled"/>
+            </summary>
+        </member>
+        <member name="M:Cell.Core.ServerBase.UdpRecvEventCompleted(System.Object,System.Net.Sockets.SocketAsyncEventArgs)">
+            <summary>
+            Handles an incoming UDP datagram.
+            </summary>
+            <param name="ar">The results of the asynchronous operation.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.ProcessUdpReceive(System.Net.Sockets.SocketAsyncEventArgs)">
+            <summary>
+            Handles an incoming UDP datagram.
+            </summary>
+            <param name="args">The results of the asynchronous operation.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.OnReceiveUDP(System.Int32,System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            Handler for a UDP datagram.
+            </summary>
+            <param name="num_bytes">The number of bytes in the datagram.</param>
+            <param name="buf">The buffer holding the datagram.</param>
+            <param name="ip">The IP address of the sender.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.SendUDP(System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            Asynchronously sends a UDP datagram to the client.
+            </summary>
+            <param name="buf">An array of bytes containing the packet to be sent.</param>
+            <param name="client">An IPEndPoint for the datagram to be sent to.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.SendToCallback(System.IAsyncResult)">
+            <summary>
+            Called when a datagram has been sent.
+            </summary>
+            <param name="ar">The result of the asynchronous operation.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.OnSendTo(System.Net.IPEndPoint,System.Int32)">
+            <summary>
+            Called when a datagram has been sent.
+            </summary>
+            <param name="clientIP">The IP address of the recipient.</param>
+            <param name="num_bytes">The number of bytes sent.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.FormatLogString(Cell.Core.IClient,System.String,System.Object[])">
+            <summary>
+            Create a string for logging information about a given client given a formatted message and parameters
+            </summary>
+            <param name="client">Client which caused the event</param>
+            <param name="msg">Message describing the event</param>
+            <param name="parms">Parameters for formatting the message.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.Error(Cell.Core.IClient,System.Exception)">
+            <summary>
+            Generates a server error.
+            </summary>
+            <param name="e">An exception describing the error.</param>
+            <param name="client">The client that generated the error.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.Error(Cell.Core.IClient,System.String,System.Object[])">
+            <summary>
+            Generates a server error.
+            </summary>
+            <param name="parms">Parameters for formatting the message.</param>
+            <param name="msg">The message describing the error.</param>
+            <param name="client">The client that generated the error.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.Warning(Cell.Core.IClient,System.Exception)">
+            <summary>
+            Generates a server warning.
+            </summary>
+            <param name="e">An exception describing the warning.</param>
+            <param name="client">The client that generated the error.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.Warning(Cell.Core.IClient,System.String,System.Object[])">
+            <summary>
+            Generates a server warning.
+            </summary>
+            <param name="parms">Parameters for formatting the message.</param>
+            <param name="msg">The message describing the warning.</param>
+            <param name="client">The client that generated the error.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.Info(Cell.Core.IClient,System.String,System.Object[])">
+            <summary>
+            Generates a server notification.
+            </summary>
+            <param name="msg">Text describing the notification.</param>
+            <param name="parms">The parameters to pass to the function for formatting.</param>
+            <param name="client">The client that generated the error.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.Debug(Cell.Core.IClient,System.String,System.Object[])">
+            <summary>
+            Generates a server debug message.
+            </summary>
+            <param name="msg">Text describing the notification.</param>
+            <param name="parms">The parameters to pass to the function for formatting.</param>
+            <param name="client">The client that generated the error.</param>
+        </member>
+        <member name="M:Cell.Core.ServerBase.Dispose">
+            <summary>
+            Don't call this method outside of the Context that manages the server.
+            </summary>
+        </member>
+        <member name="T:Cell.Core.SpinWaitLock">
+            <summary>
+            Efficient method for performing thread safety while staying in user-mode.
+            </summary>
+            <remarks>
+            <para>This is a value type so it works very efficiently when used as a field in a class.</para>
+            <para>Avoid boxing or you will lose thread safety.</para>
+            <para>This structure is based on Jeffrey Richter's article "Concurrent Affairs" in the October 2005 issue of MSDN Magazine.</para>
+            </remarks>
+        </member>
+        <member name="M:Cell.Core.SpinWaitLock.Enter">
+            <summary>
+            Attempts to lock a resource.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.SpinWaitLock.Exit">
+            <summary>
+            Releases a resource.
+            </summary>
+        </member>
+        <member name="T:Cell.Core.XmlIPAddress">
+            <summary>
+            This class provides a wrapper for <see cref="T:System.Net.IPAddress"/> that can be serialized with XML.
+            </summary>
+            <seealso cref="N:System.Xml.Serialization"/>
+            <seealso cref="T:System.Net.IPAddress"/>
+        </member>
+        <member name="F:Cell.Core.XmlIPAddress._ipAddress">
+            <summary>
+            The <see cref="P:Cell.Core.XmlIPAddress.IPAddress"/>.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.XmlIPAddress.Address">
+            <summary>
+            Gets/Sets a string representation of a <see cref="T:System.Net.IPAddress"/>.
+            </summary>
+        </member>
+        <member name="P:Cell.Core.XmlIPAddress.IPAddress">
+            <summary>
+            Gets/Sets the internal <see cref="T:System.Net.IPAddress"/>.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.XmlIPAddress.#ctor">
+            <summary>
+            Initializes a new instace of the <see cref="T:Cell.Core.XmlIPAddress"/> class.
+            </summary>
+        </member>
+        <member name="M:Cell.Core.XmlIPAddress.#ctor(System.Byte[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cell.Core.XmlIPAddress"/> class with the address specified as a <see cref="T:System.Byte"/> array.
+            </summary>
+            <param name="address">The byte array value of the IP address.</param>
+            <exception cref="T:System.ArgumentNullException">address is null.</exception>
+        </member>
+        <member name="M:Cell.Core.XmlIPAddress.#ctor(System.Byte[],System.Int64)">
+            <summary>
+            Initializes a new instace of the <see cref="T:Cell.Core.XmlIPAddress"/> class with the specified address and scope.
+            </summary>
+            <param name="address">The byte array value of the IP address.</param>
+            <param name="scopeid">The long value of the scope identifier.</param>
+            <exception cref="T:System.ArgumentNullException">address is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            scopeid &lt; 0 or
+            scopeid > 0x00000000FFFFFFF
+            </exception>
+        </member>
+        <member name="M:Cell.Core.XmlIPAddress.#ctor(System.Int64)">
+            <summary>
+            Initializes a new instace of the <see cref="T:Cell.Core.XmlIPAddress"/> class with the address specified as a <see cref="T:System.Int64"/>.
+            </summary>
+            <param name="newAddress">The long value of the IP address.</param>
+            <remarks>For example, the value 0x2414188f in big endian format would be the IP address "143.24.20.36".+ </remarks>
+        </member>
+        <member name="M:Cell.Core.XmlIPAddress.#ctor(System.Net.IPAddress)">
+            <summary>
+            Initializes a new instace of the <see cref="T:Cell.Core.XmlIPAddress"/> class with the address specified as a <see cref="T:System.Net.IPAddress"/>.
+            </summary>
+            <param name="newAddress">The new <see cref="P:Cell.Core.XmlIPAddress.IPAddress"/>.</param>
+        </member>
+        <member name="M:Cell.Core.XmlIPAddress.ToString">
+            <summary>
+            Converts the <see cref="T:Cell.Core.XmlIPAddress"/> into a string.
+            </summary>
+            <returns>A string representation of the internal <see cref="P:Cell.Core.XmlIPAddress.IPAddress"/>.</returns>
+        </member>
+        <member name="M:Cell.Core.XmlIPAddress.GetHashCode">
+            <summary>
+            Gets a hash code for the object.
+            </summary>
+            <returns>A hash code.</returns>
+        </member>
+    </members>
+</doc>

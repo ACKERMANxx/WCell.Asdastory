@@ -1,0 +1,3 @@
+C:\Users\o_malkov\Documents\voobrazilia\Server\Services\WCell.RealmServer\obj\Release\WCell.RealmServer.csprojResolveAssemblyReference.cache
+C:\Users\o_malkov\Documents\voobrazilia\Server\Services\WCell.RealmServer\obj\Release\WCell.RealmServer.Res.WCell.RealmServer.resources
+C:\Users\o_malkov\Documents\voobrazilia\Server\Services\WCell.RealmServer\obj\Release\WCell.RealmServer.csproj.GenerateResource.Cache

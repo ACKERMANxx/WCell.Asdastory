@@ -1,0 +1,2501 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WCell.Core</name>
+    </assembly>
+    <members>
+        <member name="F:WCell.Core.Addons.WCellAddonAttribute.Reloadable">
+            <summary>
+            NYI
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Addons.WCellAddonBase.Context">
+            <summary>
+            The <see cref="T:WCell.Core.Addons.WCellAddonContext"/> that was used to load this Addon.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Addons.IWCellAddon">
+            <summary>
+            Simple plugin that cannot be unloaded (the script component will make up for that)
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Addons.IWCellAddon.Name">
+            <summary>
+            The culture-invariant name of this Addon
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Addons.IWCellAddon.ShortName">
+            <summary>
+            A shorthand name of the Addon that does not contain any spaces.
+            Used as unique ID for this Addon.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Addons.IWCellAddon.Author">
+            <summary>
+            The name of the Author
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Addons.IWCellAddon.Website">
+            <summary>
+            Website (where this Addon can be found)
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Addons.IWCellAddon.Config">
+            <summary>
+            The Configuration to be used. May be null if this Addon is not configurable.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Addons.IWCellAddon.GetLocalizedName(System.Globalization.CultureInfo)">
+            <summary>
+            The localized name, in the given culture
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Addons.IWCellAddon.TearDown">
+            <summary>
+            Tears down the Addon, releases all resources and disconnects from the core.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Addons.WCellAddonContext">
+            <summary>
+            Contains all information related to an Addon.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Addons.WCellAddonContext.Assembly">
+            <summary>
+            The containing assembly (might be null if descriptor has not been loaded yet)
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Addons.WCellAddonContext.Addon">
+            <summary>
+            The created Addon (might be null if descriptor has not been loaded yet or if this a library which does not get initialized)
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Addons.WCellAddonMgr">
+            <summary>
+            Static helper and container class
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Addons.WCellAddonMgr.Contexts">
+            <summary>
+            All contexts of all Addons and utility libraries.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Addons.WCellAddonMgr.ContextsByTypeName">
+            <summary>
+            All existing AddonContexts by name of the addon's type
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Addons.WCellAddonMgr.ContextsByName">
+            <summary>
+            All existing AddonContexts by ShortName (case-insensitive)
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Addons.WCellAddonMgr.ContextsByFile">
+            <summary>
+            All existing AddonContexts by Filename (case-insensitive)
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Addons.WCellAddonMgr.GetContextByTypeName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="typeName">The full typename of the WCellAddon</param>
+            <returns></returns>
+        </member>
+        <member name="M:WCell.Core.Addons.WCellAddonMgr.LoadAddons(System.String,System.String)">
+            <summary>
+            Automatically loads all Addons from the given folder, ignoring any sub-folders or files
+            that are in ignoreString, seperated by semicolon.
+            </summary>
+            <param name="folderName">The dir to look in for the Addon-Assemblies.</param>
+            <param name="ignoreString">eg.: MyDllFile; My2ndFileIsJustALib; AnotherAddonFile</param>
+        </member>
+        <member name="M:WCell.Core.Addons.WCellAddonMgr.LoadAndInitAddon(System.IO.FileInfo)">
+            <summary>
+            Loads an Addon from the given file.
+            Returns null if file does not exist.
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WCell.Core.Addons.WCellAddonUtil.GetDefaultDescription(WCell.Core.Addons.IWCellAddon)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WCell.Core.ClientTypeUtility">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.ClientTypeUtility.Lookup(System.String)">
+            <summary>
+            Looks up an enumeration for the given string.
+            </summary>
+            <param name="locale">string representation to lookup</param>
+            <returns>Returns the matching enum member or the <see cref="F:WCell.Constants.ClientType.Invalid"/></returns>
+        </member>
+        <member name="T:WCell.Core.ClientLocaleUtility">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.ClientLocaleUtility.Lookup(System.String)">
+            <summary>
+            Looks up an enumeration for the given string.
+            </summary>
+            <param name="locale">string representation to lookup</param>
+            <returns>Returns the matching enum member or the <see cref="F:WCell.Core.WCellConstants.DefaultLocale"/></returns>
+        </member>
+        <member name="T:WCell.Core.CommandUtil">
+            <summary>
+            Contains methods that are needed for both, Auth- and RealmServer commands
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.PacketCrypt.DropN">
+            <summary>
+            The amount of bytes to drop from the stream initially.
+            
+            This is to resist the FMS attack.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.PacketCrypt.ServerDecryptionKey">
+            <summary>
+            This is the key the client uses to encrypt its packets
+            This is also the key the server uses to decrypt the packets
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.PacketCrypt.ServerEncryptionKey">
+            <summary>
+            This is the key the client uses to decrypt server packets
+            This is also the key the server uses to encrypt the packets
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.PacketCrypt.encryptServerData">
+            <summary>
+            Encrypts data sent to the client
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.PacketCrypt.decryptClientData">
+            <summary>
+            Decrypts data sent from the client
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Cryptography.Authenticator">
+            <summary>
+            Handles writing the server's authentication proof and validating the client's proof.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Cryptography.Authenticator.#ctor(WCell.Core.Cryptography.SecureRemotePassword)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="srp">the SRP instance for our current session</param>
+        </member>
+        <member name="P:WCell.Core.Cryptography.Authenticator.SRP">
+            <summary>
+            The SRP instance we're using
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Cryptography.Authenticator.WriteServerChallenge(WCell.Core.Network.PrimitiveWriter)">
+            <summary>
+            Writes the server's challenge.
+            </summary>
+            <param name="packet">the packet to write to</param>
+        </member>
+        <member name="M:WCell.Core.Cryptography.Authenticator.IsClientProofValid(WCell.Core.Network.PacketIn)">
+            <summary>
+            Checks if the client's proof matches our proof.
+            </summary>
+            <param name="packet">the packet to read from</param>
+            <returns>true if the client proof matches; false otherwise</returns>
+        </member>
+        <member name="M:WCell.Core.Cryptography.Authenticator.WriteServerProof(WCell.Core.Network.PrimitiveWriter)">
+            <summary>
+            Writes the server's proof. 
+            </summary>
+            <param name="packet">the packet to write to</param>
+        </member>
+        <member name="F:WCell.Core.Cryptography.BigInteger.maxLength">
+            <summary>
+            Maximum length of the BigInteger in uint. (4 bytes)
+            </summary>
+            <remarks>Change this to suit the required level of precision.</remarks>
+        </member>
+        <member name="F:WCell.Core.Cryptography.BigInteger.primesBelow2000">
+            <summary>
+            Primes smaller than 2000 to test the generated prime number.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.BigInteger.data">
+            <summary>
+            Holds bytes from the BigInteger.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Cryptography.BigInteger.op_OnesComplement(WCell.Core.Cryptography.BigInteger)">
+            <summary>
+            NOT operator (1's complement)
+            </summary>
+            <param name="bi1">the number</param>
+            <returns></returns>
+        </member>
+        <member name="T:WCell.Core.Cryptography.HashUtilities">
+            <summary>
+            Provides facilities for performing common-but-specific
+            cryptographical operations
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Cryptography.HashUtilities.HashDataBroker">
+            <summary>
+            Brokers various data types into their integral raw
+            form for usage by other cryptographical functions
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Cryptography.HashUtilities.HashDataBroker.#ctor(System.Byte[])">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="data">the data to broker</param>
+        </member>
+        <member name="M:WCell.Core.Cryptography.HashUtilities.HashDataBroker.op_Implicit(System.Byte[])~WCell.Core.Cryptography.HashUtilities.HashDataBroker">
+            <summary>
+            Implicit operator for byte[]->HashDataBroker casts
+            </summary>
+            <param name="data">the data to broker</param>
+            <returns>a HashDataBroker object representing the original data</returns>
+        </member>
+        <member name="M:WCell.Core.Cryptography.HashUtilities.HashDataBroker.op_Implicit(System.String)~WCell.Core.Cryptography.HashUtilities.HashDataBroker">
+            <summary>
+            Implicit operator for string->HashDataBroker casts
+            </summary>
+            <param name="str">the data to broker</param>
+            <returns>a HashDataBroker object representing the original data</returns>
+        </member>
+        <member name="M:WCell.Core.Cryptography.HashUtilities.HashDataBroker.op_Implicit(WCell.Core.Cryptography.BigInteger)~WCell.Core.Cryptography.HashUtilities.HashDataBroker">
+            <summary>
+            Implicit operator for BigInteger->HashDataBroker casts
+            </summary>
+            <param name="integer">the data to broker</param>
+            <returns>a HashDataBroker object representing the original data</returns>
+        </member>
+        <member name="M:WCell.Core.Cryptography.HashUtilities.HashDataBroker.op_Implicit(System.UInt32)~WCell.Core.Cryptography.HashUtilities.HashDataBroker">
+            <summary>
+            Implicit operator for uint->HashDataBroker casts
+            </summary>
+            <param name="integer">the data to broker</param>
+            <returns>a HashDataBroker object representing the original data</returns>
+        </member>
+        <member name="M:WCell.Core.Cryptography.HashUtilities.FinalizeHash(System.Security.Cryptography.HashAlgorithm,WCell.Core.Cryptography.HashUtilities.HashDataBroker[])">
+            <summary>
+            Computes a hash from hash data brokers using the given
+            hashing algorithm
+            </summary>
+            <param name="algorithm">the hashing algorithm to use</param>
+            <param name="brokers">the data brokers to hash</param>
+            <returns>the hash result of all the data brokers</returns>
+        </member>
+        <member name="M:WCell.Core.Cryptography.HashUtilities.HashToBigInteger(System.Security.Cryptography.HashAlgorithm,WCell.Core.Cryptography.HashUtilities.HashDataBroker[])">
+            <summary>
+            Computes a hash from hash data brokers using the given 
+            hash algorithm, and generates a BigInteger from it
+            </summary>
+            <param name="algorithm"></param>
+            <param name="brokers"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WCell.Core.Cryptography.SecureRemotePassword">
+             <summary>
+             This is an implementation of the SRP algorithm documented here:
+             
+             http://srp.stanford.edu/design.html
+             
+            
+             Example code (though usually data is copied over the wire):
+             	WCell.Cryptography.SRP server = new WCell.Cryptography.SRP(true, "USER", "PASSWORD");
+            		WCell.Cryptography.SRP client = new WCell.Cryptography.SRP(false, "USER", "PASSWORD");
+            
+            		server.PublicEphemeralValueA = client.PublicEphemeralValueA;
+            		client.Salt = server.Salt;
+            		client.PublicEphemeralValueB = server.PublicEphemeralValueB;
+            
+            		Console.WriteLine("Server's session key = {0}", server.SessionKey.ToHexString());
+            		Console.WriteLine("Client's session key = {0}", client.SessionKey.ToHexString());
+            
+            		Console.WriteLine("\nServer key == client key {0}", server.SessionKey == client.SessionKey);
+            
+            		Console.WriteLine("Client proof valid: {0}", client.ClientSessionKeyProof == server.ClientSessionKeyProof);
+            		Console.WriteLine("Server proof valid: {0}", client.ServerSessionKeyProof == server.ServerSessionKeyProof);
+             </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.SecureRemotePassword.MinPassLength">
+            <summary>
+            The required minimum length of a password
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.SecureRemotePassword.MaxPassLength">
+            <summary>
+            The required maximum length of a password
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Cryptography.SecureRemotePassword.#ctor(System.String,WCell.Core.Cryptography.BigInteger,WCell.Core.Cryptography.BigInteger,WCell.Core.Cryptography.SecureRemotePassword.SRPParameters)">
+            <summary>
+            Make an SRP for user authentication. You use something like this when your
+            verifier and salt are stored in a database
+            </summary>
+            <param name="username"></param>
+            <param name="verifier"></param>
+            <param name="salt"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.IsServer">
+            <summary>
+            Are we the server? This should be set before calculation commences.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.Username">
+            <summary>
+            Correct username. This should be set before calculations happen.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.ClientSessionKeyProof">
+            <summary>
+            Referred to as 'M' in the documentation. This is used for authentication.
+            
+            The client sends this value to the server and the server calculates it locally to verify it.
+            The same then happens with ServerSessionKeyProof. Note ClientSessionKeyProof should come first.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.ServerSessionKeyProof">
+            <summary>
+            The server sends this to the client as proof it has the same session key as the client.
+            The client will calculate this locally to verify.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Cryptography.SecureRemotePassword.RandomNumber">
+            <summary>
+            Generate a random number of maximal size
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.Multiplier">
+            <summary>
+            'k' in the spec. In SRP-6a k = H(N, g). Older versions have k = 3.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.Salt">
+            <summary>
+            Salt for credentials hash. You can bind this to the users'
+            account or use the automatically generated random salt.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.CredentialsHash">
+            <summary>
+            'x' in the spec. Note that this is slightly different - the spec says
+            x = H(s, p) whereas here x = H(s, H(I, p)), which is the implementation in the demo.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.PublicEphemeralValueA">
+            <summary>
+            'A' in the spec. A = g^a, generated by client and sent to the server
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.PublicEphemeralValueB">
+            <summary>
+            'B' in the spec. B = kv + g^b, generated by the server and sent to the client
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.ScramblingParameter">
+            <summary>
+            u in the spec. Generated by both server and client.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.SessionKeyRaw">
+            <summary>
+            This is the session key used for encryption later.
+            'K' in the spec. Note that this is different to 'k' (Multiplier)
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.Verifier">
+            <summary>
+            V in the spec.
+            v = g^x (mod N)
+            
+            This only makes sense for servers.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Cryptography.SecureRemotePassword.RandomNumber(System.UInt32)">
+            <summary>
+            Generate a random number of a specified size
+            </summary>
+            <param name="size">Maximum size in bytes of the random number</param>
+            <returns></returns>
+        </member>
+        <member name="T:WCell.Core.Cryptography.SecureRemotePassword.SRPParameters.SRPVersion">
+            <summary>
+            Algorithm version. Consult specification for differences.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.SecureRemotePassword.SRPParameters.KeyLength">
+            <summary>
+            Maximum length of crypto keys in bytes.
+            </summary>
+            <remarks>You might get unlucky and have much shorter keys - this should be checked and keys recalculated.</remarks>
+        </member>
+        <member name="F:WCell.Core.Cryptography.SecureRemotePassword.SRPParameters.RandomGenerator">
+            <summary>
+            Random number generator for this instance.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.SecureRemotePassword.SRPParameters.AlgorithmVersion">
+            <summary>
+            Version of this instance.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Cryptography.SecureRemotePassword.SRPParameters.Hash">
+            <summary>
+            Hashing function for the instance.
+            </summary>
+            <remarks>MD5 or other SHA hashes are usable, though SHA1 is more standard for SRP.</remarks>
+        </member>
+        <member name="F:WCell.Core.Cryptography.SecureRemotePassword.SRPParameters.s_generator">
+            <summary>
+            'g' in the spec. This number must be a generator in the finite field Modulus.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Cryptography.SecureRemotePassword.SRPParameters.Modulus">
+            <summary>
+            All operations are mod this number. It should be a large prime.
+            </summary>
+            <remarks>Referred to as 'N' in the spec.</remarks>
+            <remarks>Defaults to 128 bits.</remarks>
+        </member>
+        <member name="M:WCell.Core.Cryptography.SecureRemotePassword.GenerateCredentialsHash(System.String,System.String)">
+            <summary>
+            Generates a hash for an account's credentials (username:password) based on the SRP hashing method,
+            </summary>
+            <param name="username">the username</param>
+            <param name="password">the password</param>
+            <returns>a byte array of the resulting hash</returns>
+        </member>
+        <member name="T:WCell.Core.AsyncTaskPool">
+            <summary>
+            A task pool that processes messages asynchronously on the application thread pool.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.AsyncTaskPool.#ctor">
+            <summary>
+            Creates a new task pool with an update frequency of 100ms
+            </summary>
+        </member>
+        <member name="M:WCell.Core.AsyncTaskPool.#ctor(System.Int64)">
+            <summary>
+            Creates a new task pool with the specified update frequency.
+            </summary>
+            <param name="updateFrequency">the update frequency of the task pool</param>
+        </member>
+        <member name="M:WCell.Core.AsyncTaskPool.EnqueueTask(WCell.Util.Threading.IMessage)">
+            <summary>
+            Enqueues a new task in the queue that will be executed during the next
+            tick.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.AsyncTaskPool.WaitOneTick">
+            <summary>
+            Waits until all currently enqueued messages have been processed.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Database.DatabaseUtil">
+            <summary>
+            Temporary class - Will need cleanup.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Database.DatabaseUtil.Input">
+            <summary>
+            The TextReader from which to read Input
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Database.DatabaseUtil.DBErrorHook">
+            <summary>
+            Is called when the DB creates an error and asks the User whether or not
+            to auto-recreate the DB. Will not query the user and directly throw the Exception
+            if false is returned (in order to avoid DB-deletion of production systems).
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Database.DatabaseUtil.IsWaiting">
+            <summary>
+            Whether it is currently waiting for user-input.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Database.DatabaseUtil.ReleaseConsole">
+            <summary>
+            Console should not be read from anymore at this point.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Database.DatabaseUtil.InitAR(System.Reflection.Assembly)">
+            <summary>
+            Called to initialize setup NHibernate and ActiveRecord
+            </summary>
+            <param name="asm"></param>
+            <param name="dbType"></param>
+            <param name="connStr"></param>
+            <returns>Whether its a fatal error</returns>
+        </member>
+        <member name="M:WCell.Core.Database.DatabaseUtil.CreateSchema">
+            <summary>
+            (Drops and re-)creates the Schema of all tables that this has originally initialized with.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Database.DatabaseUtil.DropSchema">
+            <summary>
+            Drops the Schema of all tables that this has originally initialized with
+            </summary>
+        </member>
+        <member name="M:WCell.Core.DataConvertionHelpers.AsBytes(System.String)">
+            <summary>
+            Converts hex string to byte sequence.
+            </summary>
+            <exception cref="T:System.ArgumentException">String contains wrong Symbol.</exception>
+            <param name="data">Hex string.</param>
+            <returns>Byte sequence.</returns>
+        </member>
+        <member name="M:WCell.Core.Extensions.ReadCString(System.IO.BinaryReader)">
+            <summary>
+            Reads a C-style null-terminated string from the current stream.
+            </summary>
+            <param name="binReader">the extended <see cref="T:System.IO.BinaryReader" /> instance</param>
+            <returns>the string being reader</returns>
+        </member>
+        <member name="T:WCell.Core.Compression">
+            <summary>
+            Wrapper for ICSharpCode.SharpZipLib.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Compression.CompressZLib(System.Byte[],System.Byte[],System.Int32,System.Int32@)">
+            <summary>
+            Performs deflate compression on the given data.
+            </summary>
+            <param name="input">the data to compress</param>
+            <param name="output">the compressed data</param>
+        </member>
+        <member name="M:WCell.Core.Compression.DecompressZLib(System.Byte[],System.Byte[])">
+            <summary>
+            Performs inflate decompression on the given data.
+            </summary>
+            <param name="input">the data to decompress</param>
+            <param name="output">the decompressed data</param>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.Config">
+            <summary>
+            During this step, the config will be loaded
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.First">
+            <summary>
+            Initializes the database; connects. 
+            Loads addons 
+            Starts loading spells
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.Second">
+            <summary>
+            Initializes skills, factions
+            Registers packet handlers
+            Initializes Content
+            Loads spell overrides
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.Third">
+            <summary>
+            Finalizes spells
+            Initializes the world
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.Fourth">
+            <summary>
+            Loads DB content: NPCs, Items, AreaTriggers, WorldLocations, Commands, Taxi Pathes
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.Fifth">
+            <summary>
+            Initializes Auctions, Mail, EquipmentSetRecords, Guild Ids, Experience-Table, performance counters, ItemRecord, Repair Costs, Quests, GameObjects, Guilds, Instances
+            Creates default chat channels
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.Sixth">
+            <summary>
+            Initialize Transports
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.Seventh">
+            <summary>
+            Initializes Races and Classes
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.Eighth">
+            <summary>
+            Initializes Battlegrounds
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.Nineth">
+            <summary>
+            Not used. Note the spelling mistake.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitializationPass.Tenth">
+            <summary>
+            Initializes Debug Tools
+            Initializes Update Packets
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Initialization.InitFailedHandler">
+            <summary>
+            
+            </summary>
+            <param name="mgr"></param>
+            <param name="step"></param>
+            <returns>Whether or not to continue</returns>
+        </member>
+        <member name="T:WCell.Core.Initialization.InitMgr">
+            <summary>
+            Handles the loading and execution of all initialization code.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Initialization.InitMgr.FeedbackRepeatFailHandler">
+            <summary>
+            Handler asks user through Console whether to repeat the step and then continues or just stops
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Initialization.InitMgr.Initialize(System.Reflection.Assembly)">
+            <summary>
+            Initializes all Types of the given Assembly.
+            </summary>
+            <returns>Whether initialization could be performed for all found steps.</returns>
+        </member>
+        <member name="M:WCell.Core.Initialization.InitMgr.Initialize(System.Type)">
+            <summary>
+            Initializes the given Type.
+            </summary>
+            <returns>Whether initialization could be performed for all found steps in the given type.</returns>
+        </member>
+        <member name="P:WCell.Core.Initialization.InitMgr.CurrentPass">
+            <summary>
+            The <see cref="T:WCell.Core.Initialization.InitializationPass"/> that is currently being executed.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Initialization.InitMgr.Init">
+            <summary>
+            Finds, reads, and stores all initialization steps to be completed.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Initialization.InitMgr.AddStepsOfAsm(System.Reflection.Assembly)">
+            <summary>
+            Adds all InitializationSteps of the given Assembly.
+            </summary>
+            <param name="asm"></param>
+        </member>
+        <member name="M:WCell.Core.Initialization.InitMgr.PerformInitialization">
+            <summary>
+            Tries to execute all initialization steps, and returns the initialization result, 
+            logging every failure and success.
+            </summary>
+            <returns>true if all initialization steps completed, false if a required step failed.</returns>
+        </member>
+        <member name="T:WCell.Core.Manager`1">
+            <summary>
+            Base class used for all Manager classes
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Network.NetworkStatistics">
+            <summary>
+            Manages network-related statistics.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Network.DisposableRealmPacketIn">
+            <summary>
+            This kind of RealmPacketIn frees the used BufferSegment no disposal
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Network.DisposableRealmPacketIn.Segment">
+            <summary>
+            Exposed BufferSegment for customizations etc.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Network.FakeClientBase`4">
+            <summary>
+            The FakeClientBase cannot handle sending of partial packets!
+            </summary>
+            <typeparam name="C">The type of this FakeClient</typeparam>
+            <typeparam name="PI">The type of PacketIn</typeparam>
+            <typeparam name="PO">The type of PacketOut</typeparam>
+            <typeparam name="PM">The type of the PacketManager</typeparam>
+        </member>
+        <member name="M:WCell.Core.Network.FakeClientBase`4.#ctor(Cell.Core.ServerBase,`3)">
+            <summary>
+            
+            </summary>
+            <param name="server"></param>
+            <param name="packetManager">The PacketManager that handles the packets sent to this Client by the server.</param>
+        </member>
+        <member name="P:WCell.Core.Network.FakeClientBase`4._ThisClient">
+            <summary>
+            Returns this Client casted to C
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.FakeClientBase`4.Send(System.Byte[])">
+            <summary>
+            Sends a new Packet to this Client.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.FakeClientBase`4.Send(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Sends a new Packet to this Client.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.FakeClientBase`4.Send(`2,System.Boolean)">
+            <summary>
+            Sends a new Packet to this Client.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.FakeClientBase`4.HandleSMSG(`1)">
+            <summary>
+            Handles the given packet, sent by the server.
+            </summary>
+            <returns>Whether the packet got handled instantly or (if false) failed or was enqueued</returns>
+        </member>
+        <member name="M:WCell.Core.Network.FakeClientBase`4.Dispose">
+            <summary>
+            Remove all used resources
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.FakeClientBase`4.CreatePacket(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Creates a new PacketIn of this class' Packet-type, using the given 
+            PacketOut-bytes.
+            </summary>
+            <param name="outPacketBytes"></param>
+            <param name="offset"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WCell.Core.Network.FakeClientBase`4.CreatePacket(`2)">
+            <summary>
+            Creates a new PacketIn of this class' Packet-type, using the given 
+            PacketOut-bytes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketHandler`2.#ctor(System.Action{`0,`1},System.Boolean,System.Boolean)">
+            <summary>
+            Creates a packet handler definition.
+            </summary>
+            <param name="handler">the handler to wrap</param>
+            <param name="gamePacket">whether or not this packet is a game packet (after authntication)</param>
+        </member>
+        <member name="P:WCell.Core.Network.PacketHandler`2.Handler">
+            <summary>
+            The handler delegate.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Network.PacketHandler`2.IsGamePacket">
+            <summary>
+            Whether a selected Character is required for this kind of Packet
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Network.PacketHandler`2.RequiresLogIn">
+            <summary>
+            Whether this Packet requires the player
+            to be logged in with a Character and not being
+            in the process of logging out.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Network.PacketIn">
+            <summary>
+            Reads primitive data types from an array of binary data.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.#ctor(Cell.Core.BufferSegment,System.Int32,System.Int32)">
+            <summary>
+            Constructs a PacketIn object given the buffer to read, the offset to read from, and the number of bytes to read.
+            </summary>
+            <param name="segment">The buffer container wrapping our data</param>
+            <param name="offset">The offset to read from the data array</param>
+            <param name="length">The number of bytes to read</param>
+        </member>
+        <member name="P:WCell.Core.Network.PacketIn.HeaderSize">
+            <summary>
+            The packet header size.
+            </summary>
+            <returns>The header size in bytes.</returns>
+        </member>
+        <member name="P:WCell.Core.Network.PacketIn.PacketId">
+            <summary>
+            The ID of this packet.
+            </summary>
+            <example>RealmServerOpCode.SMSG_QUESTGIVER_REQUEST_ITEMS</example>
+        </member>
+        <member name="P:WCell.Core.Network.PacketIn.Position">
+            <summary>
+            The position within the current packet.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Network.PacketIn.Length">
+            <summary>
+            The length in bytes of the packet.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Network.PacketIn.ContentLength">
+            <summary>
+            The length in bytes of the packet.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Network.PacketIn.RemainingLength">
+            <summary>
+            Number of bytes available in the packet data.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Network.PacketIn.Disposed">
+            <summary>
+            Whether or not this packet has been disposed.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadUInt16BE">
+            <summary>
+            Reads a 2-byte big endian integer value from the current stream and advances the current position of the stream by two bytes.
+            </summary>
+            <returns>A 2-byte big endian integer value read from the current stream.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadFloat">
+            <summary>
+            Reads a 4-byte floating point value from the current stream and advances the current position of the stream by four bytes.
+            </summary>
+            <returns>A 4-byte floating point value read from the current stream.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadString(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadCString">
+            <summary>
+            Reads a null-terminated UTF-8 encoded string.
+            </summary>
+            <returns>the string that was read</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadReversedString">
+            <summary>
+            Reads a string from the current stream, and reverses it. The string is ended with a NULL byte.
+            </summary>
+            <returns>The string being read.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadPascalString">
+            <summary>
+            Reads a string from the current stream. The string is prefixed with the length, encoded as an integer seven bits at a time.
+            </summary>
+            <returns>The string being read.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadPascalStringUShort">
+            <summary>
+            
+            </summary>
+            <returns>The string being read.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadPascalStringUInt">
+            <summary>
+            
+            </summary>
+            <returns>The string being read.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadReversedPascalString(System.Int32)">
+            <summary>
+            Reads a string from the current stream, and reverses it. The string read is of length bytes.
+            </summary>
+            <returns>The string being read.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadBigInteger(System.Int32)">
+            <summary>
+            Reads a <see cref="T:WCell.Core.Cryptography.BigInteger" /> from the current stream. The <see cref="T:WCell.Core.Cryptography.BigInteger" /> is of length bytes.
+            </summary>
+            <param name="length">The length in bytes of the <see cref="T:WCell.Core.Cryptography.BigInteger" />.</param>
+            <returns>The <see cref="T:WCell.Core.Cryptography.BigInteger" /> representation of the bytes.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadBigIntegerLengthValue">
+            <summary>
+            Reads a <see cref="T:WCell.Core.Cryptography.BigInteger" /> from the current stream. The <see cref="T:WCell.Core.Cryptography.BigInteger" /> is prefixed by the length.
+            </summary>
+            <returns>The <see cref="T:WCell.Core.Cryptography.BigInteger" /> representation of the bytes.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadIPAddress">
+            <summary>
+            Reads an <see cref="T:Cell.Core.XmlIPAddress" /> from the current stream. 
+            </summary>
+            <returns>The <see cref="T:Cell.Core.XmlIPAddress" /> representation of the bytes.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadVector3">
+            <summary>
+            Reads a <see cref="T:WCell.Util.Graphics.Vector3" /> from the current stream. 
+            </summary>
+            <returns>The <see cref="T:WCell.Util.Graphics.Vector3" /> representation of the bytes.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadVector4">
+            <summary>
+            Reads a <see cref="T:WCell.Util.Graphics.Vector4" /> from the current stream. 
+            </summary>
+            <returns>The <see cref="T:WCell.Util.Graphics.Vector4" /> representation of the bytes.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadEntityId">
+            <summary>
+            Reads an EntityId from this stream and advances the current position of the stream by eight bytes.
+            </summary>
+            <returns>An EntityId read from the current stream.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ReadPackedEntityId">
+            <summary>
+            Reads an EntitiyId packed
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.SkipBytes(System.Int32)">
+            <summary>
+            Advances the position of the current stream by num bytes.
+            </summary>
+            <param name="num">The number of bytes to advance.</param>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.Seek(System.Int32,System.IO.SeekOrigin)">
+            <summary>
+            Sets the position within the current stream.
+            </summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ToString">
+            <summary>
+            Gets the name of the packet ID. (ie. CMSG_PING)
+            </summary>
+            <returns>a string containing the packet's canonical name</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketIn.ToHexDump">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WCell.Core.Network.PacketManager`3">
+            <summary>
+            Manages packet handlers and the execution of them.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.PacketManager`3.Register(WCell.Core.Network.PacketId,System.Action{`0,`1},System.Boolean,System.Boolean)">
+            <summary>
+            Registers a packet handler delegate for a specific packet.
+            </summary>
+            <param name="packetId">the PacketID of the packet to register the handler for</param>
+            <param name="fn">the handler delegate to register for the specified packet type</param>
+        </member>
+        <member name="M:WCell.Core.Network.PacketManager`3.HandleUnhandledPacket(`0,`1)">
+            <summary>
+            Handles a packet that has no handler.
+            </summary>
+            <param name="client">the client the packet is from</param>
+            <param name="packet">the unhandled packet</param>
+        </member>
+        <member name="M:WCell.Core.Network.PacketManager`3.HandlePacket(`0,`1)">
+            <summary>
+            Attempts to handle an incoming packet.
+            </summary>
+            <param name="client">the client the packet is from</param>
+            <param name="packet">the packet to be handled</param>
+            <returns>true if the packet handler executed successfully; false otherwise</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketManager`3.Register(System.Type)">
+            <summary>
+            Registers all packet handlers defined in the given type.
+            </summary>
+            <param name="type">the type to search through for packet handlers</param>
+        </member>
+        <member name="M:WCell.Core.Network.PacketManager`3.RegisterAll(System.Reflection.Assembly)">
+            <summary>
+            Automatically detects and registers all PacketHandlers within the given Assembly
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Network.PacketOut">
+            <summary>
+            Writes data to an outgoing packet stream
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.PacketOut.#ctor(WCell.Core.Network.PacketId)">
+            <summary>
+            Constructs an empty packet with the given packet ID.
+            </summary>
+            <param name="id">the ID of the packet</param>
+        </member>
+        <member name="M:WCell.Core.Network.PacketOut.#ctor(WCell.Core.Network.PacketId,System.Int32)">
+            <summary>
+            Constructs an empty packet with an initial capacity of exactly or greater than the specified amount.
+            </summary>
+            <param name="id">the ID of the packet</param>
+            <param name="maxCapacity">the minimum space required for the packet</param>
+        </member>
+        <member name="P:WCell.Core.Network.PacketOut.HeaderSize">
+            <summary>
+            The packet header size.
+            </summary>
+            <returns>The header size in bytes.</returns>
+        </member>
+        <member name="P:WCell.Core.Network.PacketOut.PacketId">
+            <summary>
+            The ID of this packet.
+            </summary>
+            <example>RealmServerOpCode.SMSG_QUESTGIVER_REQUEST_ITEMS</example>
+        </member>
+        <member name="P:WCell.Core.Network.PacketOut.Position">
+            <summary>
+            The position within the current packet.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Network.PacketOut.TotalLength">
+            <summary>
+            The length of this packet in bytes
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.PacketOut.Fill(System.Byte,System.Int32)">
+            <summary>
+            The buffer is already internally resized
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketOut.FinalizeWrite">
+            <summary>
+            Finalize packet data
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.PacketOut.GetFinalizedPacket">
+            <summary>
+            Finalizes and copies the content of the packet
+            </summary>
+            <returns>Packet data</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketOut.Reverse``1(``0[])">
+            <summary>
+            Reverses the contents of an array
+            </summary>
+            <typeparam name="T">type of the array</typeparam>
+            <param name="buffer">array of objects to reverse</param>
+        </member>
+        <member name="M:WCell.Core.Network.PacketOut.Reverse``1(``0[],System.Int32)">
+            <summary>
+            Reverses the contents of an array
+            </summary>
+            <typeparam name="T">type of the array</typeparam>
+            <param name="buffer">array of objects to reverse</param>
+            <param name="length">number of objects in the array</param>
+        </member>
+        <member name="M:WCell.Core.Network.PacketOut.ToHexDump">
+            <summary>
+            Dumps the packet to string form, using hexadecimal as the formatter
+            </summary>
+            <returns>hexadecimal representation of the data parsed</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketOut.ToString">
+            <summary>
+            Gets the name of the packet ID. (ie. CMSG_PING)
+            </summary>
+            <returns>a string containing the packet's canonical name</returns>
+        </member>
+        <member name="M:WCell.Core.Network.PacketOut.WriteUIntPascalString(System.String)">
+            <summary>
+            String preceeded by uint length
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:WCell.Core.Network.PrimitiveWriter">
+            <summary>
+            An extension of <seealso cref="T:System.IO.BinaryWriter"/>, which provides overloads
+            for writing primitives to a stream, including special WoW structures
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteByte(System.Byte)">
+            <summary>
+            Writes a byte to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteByte(System.UInt16)">
+            <summary>
+            Writes a byte to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteByte(System.Int16)">
+            <summary>
+            Writes a byte to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteByte(System.UInt32)">
+            <summary>
+            Writes a byte to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteByte(System.Int32)">
+            <summary>
+            Writes a byte to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteByte(System.Boolean)">
+            <summary>
+            Writes a byte to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt16(System.Byte)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt16(System.UInt16)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt16(System.Int16)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt16(System.UInt32)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt16(System.Int32)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt32(System.Byte)">
+            <summary>
+            Writes an unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt32(System.UInt16)">
+            <summary>
+            Writes an unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt32(System.Int16)">
+            <summary>
+            Writes an unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt32(System.UInt32)">
+            <summary>
+            Writes an unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt32(System.Int32)">
+            <summary>
+            Writes an unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt32(System.Int64)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt16(System.Byte)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt16(System.UInt16)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt16(System.Int16)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt16(System.UInt32)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt16(System.Int32)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt32(System.Byte)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt32(System.UInt16)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt32(System.Int16)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt32(System.UInt32)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt32(System.Int32)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt64(System.Byte)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt64(System.UInt16)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt64(System.Int16)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt64(System.UInt32)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt64(System.Int32)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt64(System.UInt64)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt64(System.Int64)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteShort(System.Byte)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteShort(System.UInt16)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteShort(System.Int16)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteShort(System.UInt32)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteShort(System.Int32)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt(System.Byte)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt(System.UInt16)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt(System.Int16)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt(System.UInt32)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteInt(System.Int32)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteFloat(System.Byte)">
+            <summary>
+            Writes a float to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteFloat(System.UInt16)">
+            <summary>
+            Writes a float to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteFloat(System.Int16)">
+            <summary>
+            Writes a float to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteFloat(System.UInt32)">
+            <summary>
+            Writes a float to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteFloat(System.Int32)">
+            <summary>
+            Writes a float to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteFloat(System.Double)">
+            <summary>
+            Writes a float to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteFloat(System.Single)">
+            <summary>
+            Writes a float to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUShort(System.Byte)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUShort(System.UInt16)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUShort(System.Int16)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUShort(System.UInt32)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUShort(System.Int32)">
+            <summary>
+            Writes a short to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt(System.Byte)">
+            <summary>
+            Writes an unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt(System.UInt16)">
+            <summary>
+            Writes an unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt(System.Int16)">
+            <summary>
+            Writes an unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt(System.UInt32)">
+            <summary>
+            Writes an unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt(System.Int32)">
+            <summary>
+            Writes an unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUInt(System.Int64)">
+            <summary>
+            Writes an int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteULong(System.Byte)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteULong(System.UInt16)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteULong(System.Int16)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteULong(System.UInt32)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteULong(System.Int32)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteULong(System.UInt64)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteULong(System.Int64)">
+            <summary>
+            Writes an eight byte unsigned int to the stream
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteCString(System.String)">
+            <summary>
+            Writes a C-style string to the stream (actual string is null-terminated)
+            </summary>
+            <param name="str">String to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteUTF8CString(System.String)">
+            <summary>
+            Writes a C-style UTF8 string to the stream (actual string is null-terminated)
+            </summary>
+            <param name="str">String to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteBigInt(WCell.Core.Cryptography.BigInteger)">
+            <summary>
+            Writes a BigInteger to the stream
+            </summary>
+            <param name="bigInt">BigInteger to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteBigInt(WCell.Core.Cryptography.BigInteger,System.Int32)">
+            <summary>
+            Writes a BigInteger to the stream
+            </summary>
+            <param name="bigInt">BigInteger to write</param>
+            <param name="length">maximum numbers of bytes to write for the BigInteger</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteBigIntLength(WCell.Core.Cryptography.BigInteger)">
+            <summary>
+            Writes a BigInteger to the stream, while writing the length before it
+            </summary>
+            <param name="bigInt">BigInteger to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteBigIntLength(WCell.Core.Cryptography.BigInteger,System.Int32)">
+            <summary>
+            Writes a BigInteger to the stream, while writing the length before it
+            </summary>
+            <param name="bigInt">BigInteger to write</param>
+            <param name="length">maximum numbers of bytes to write for th BigInteger</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteShortBE(System.Byte)">
+            <summary>
+            Writes a short to the stream, in network order
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteShortBE(System.Int16)">
+            <summary>
+            Writes a short to the stream, in network order
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteShortBE(System.Int32)">
+            <summary>
+            Writes a short to the stream, in network order
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteIntBE(System.Byte)">
+            <summary>
+            Writes an int to the stream, in network order
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteIntBE(System.Int16)">
+            <summary>
+            Writes an int to the stream, in network order
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteIntBE(System.Int32)">
+            <summary>
+            Writes an int to the stream, in network order
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteLongBE(System.Int64)">
+            <summary>
+            Writes a long to the stream, in network order
+            </summary>
+            <param name="val">the value to write</param>
+        </member>
+        <member name="M:WCell.Core.Network.PrimitiveWriter.WriteDateTime(System.DateTime)">
+            <summary>
+            Writes a date time to the stream, in WoW format
+            </summary>
+            <param name="dateTime">the time to write</param>
+        </member>
+        <member name="T:WCell.Core.Network.RealmPacketOut">
+            <summary>
+            Packet sent to the realm server
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Network.RealmPacketOut.HEADER_SIZE">
+            <summary>
+            Constant indicating this <c>RealmPacketOut</c> header size.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Network.RealmPacketOut.HeaderSize">
+            <summary>
+            The <c>RealmPacketOut</c> header size.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Network.RealmPacketOut.OpCode">
+            <summary>
+            The opcode of the packet
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Network.RealmPacketOut.Finilialized">
+            <summary>
+            todo optimize perfomance by sortin eng rus clients
+            </summary>       
+            
+        </member>
+        <member name="M:WCell.Core.Network.RealmPacketOut.FinalizeWrite">
+            <summary>
+            Finalize packet data
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Paths.Path">
+            <summary>
+            TODO: Recycle
+            A nicely recyclable iterable Vector3 collection
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Paths.Path.#ctor(WCell.Util.Graphics.Vector3[])">
+            <summary>
+            Creates a new path that re-uses the given array of points.
+            </summary>
+            <param name="points"></param>
+        </member>
+        <member name="M:WCell.Core.Paths.Path.Add(WCell.Util.Graphics.Vector3)">
+            <summary>
+            Adds a new vector to the Path in reverse order
+            i.e. the first added vector goes onto the end of the array, the next goes to (end - 1), etc.
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:WCell.Core.Paths.Path.Add(System.Collections.Generic.IEnumerable{WCell.Util.Graphics.Vector3})">
+            <summary>
+            Adds a list of new vectors to the Path in reverse order
+            i.e. the first added vector goes onto the end of the array, the next goes onto (end - 1), etc.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.SelfRunningTaskQueue.UpdateInterval">
+            <summary>
+            Update interval in milliseconds
+            </summary>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.RegisterUpdatable(WCell.Core.Timers.IUpdatable)">
+            <summary>
+            Registers an updatable object in the server timer pool.
+            </summary>
+            <param name="updatable">the object to register</param>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.UnregisterUpdatable(WCell.Core.Timers.IUpdatable)">
+            <summary>
+            Unregisters an updatable object from the server timer pool.
+            </summary>
+            <param name="updatable">the object to unregister</param>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.RegisterUpdatableLater(WCell.Core.Timers.IUpdatable)">
+            <summary>
+            Registers the given Updatable during the next Map Tick
+            </summary>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.UnregisterUpdatableLater(WCell.Core.Timers.IUpdatable)">
+            <summary>
+            Unregisters the given Updatable during the next Map Update
+            </summary>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.CancelTimer(WCell.Core.Timers.SimpleTimerEntry)">
+            <summary>
+            Stops running the given timer
+            </summary>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.AddMessage(System.Action)">
+            <summary>
+            Queues a task for execution in the server task pool.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.Clear">
+            <summary>
+            removes all messages from queue
+            </summary>
+        </member>
+        <member name="P:WCell.Core.SelfRunningTaskQueue.IsInContext">
+            <summary>
+            Indicates whether the current Thread is the processor of the MessageQueue
+            </summary>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.AddMessage(WCell.Util.Threading.IMessage)">
+            <summary>
+            Queues a task for execution in the server task pool.
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.EnsureNoContext">
+            <summary>
+            Ensures execution outside the Map-context.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">thrown if the calling thread is the map thread</exception>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.AddMessageAndWait(System.Boolean,System.Action)">
+            <summary>
+            Adds the given message to the map's message queue and does not return 
+            until the message is processed.
+            </summary>
+            <remarks>Make sure that the map is running before calling this method.</remarks>
+            <remarks>Must not be called from the map context.</remarks>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.AddMessageAndWait(System.Boolean,WCell.Util.Threading.IMessage)">
+            <summary>
+            Adds the given message to the map's message queue and does not return 
+            until the message is processed.
+            </summary>
+            <remarks>Make sure that the map is running before calling this method.</remarks>
+            <remarks>Must not be called from the map context.</remarks>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.WaitOneTick">
+            <summary>
+            Waits for one map tick before returning.
+            </summary>
+            <remarks>Must not be called from the map context.</remarks>
+        </member>
+        <member name="M:WCell.Core.SelfRunningTaskQueue.WaitTicks(System.Int32)">
+            <summary>
+            Waits for the given amount of ticks.
+            One tick might take 0 until Map.UpdateSpeed milliseconds.
+            </summary>
+            <remarks>Make sure that the map is running before calling this method.</remarks>
+            <remarks>Must not be called from the map context.</remarks>
+        </member>
+        <member name="P:WCell.Core.ServerApp`1.InitMgr">
+            <summary>
+            The singleton instance of the InitMgr that runs the default Startup routine.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ServerApp`1.EntryLocation">
+            <summary>
+            Modify this to the Location of the file whose App-config you want to load.
+            This is needed specifically for tests, since they don't have an EntryAssembly
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ServerApp`1.Instance">
+            <summary>
+            Returns the single instance of the implemented server class.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ServerApp`1.AssemblyVersion">
+            <summary>
+            Gets the assembly version information for the entry assembly of the process.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ServerApp`1.IOQueue">
+            <summary>
+            Used for general I/O tasks.
+            These tasks are usually blocking, so do not use this for precise timers
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ServerApp`1.IsShuttingDown">
+            <summary>
+            Whether the Server is in the process of shutting down (cannot be cancelled anymore)
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ServerApp`1.IsPreparingShutdown">
+            <summary>
+            Whether a timer has been started to shutdown the server.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.ServerApp`1.GetType(System.String)">
+            <summary>
+            Gets the type from the App's own or any of the currently registered Addon Assemblies.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:WCell.Core.ServerApp`1.Started">
+            <summary>
+            Is executed when the server finished starting up
+            </summary>
+        </member>
+        <member name="M:WCell.Core.ServerApp`1.Start">
+            <summary>
+            Starts the server and performs and needed initialization.
+            </summary>
+        </member>
+        <member name="E:WCell.Core.ServerApp`1.Shutdown">
+            <summary>
+            Triggered when the App shuts down.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.ServerApp`1.ShutdownIn(System.UInt32)">
+            <summary>
+            Forces the server to shutdown after the given delay.
+            </summary>
+            <param name="delayMillis">the time to wait before shutting down</param>
+        </member>
+        <member name="T:WCell.Core.SingletonHolder`1">
+            <summary>
+            Private class for instances of a singleton object.
+            </summary>
+            <typeparam name="TSingle">the type of the singleton object</typeparam>
+        </member>
+        <member name="P:WCell.Core.Statistics`1.StatsPostInterval">
+            <summary>
+            The Statistic-timer update interval in seconds
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Terrain.ITerrain">
+            <summary>
+            Represents the Terrain of a certain Map
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Terrain.ITerrain.IsAvailable(System.Int32,System.Int32)">
+            <summary>
+            Indicates whether the given tile is available at all.
+            When false is returned, this terrain will probably not provide any collision detection or pathfinding features.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Terrain.ITerrain.HasLOS(WCell.Util.Graphics.Vector3,WCell.Util.Graphics.Vector3)">
+            <summary>
+            Returns true if there is a clear line of sight between startPos and endPos.
+            Also returns true, if it could not reliably determine LoS.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Terrain.ITerrain.FindPath(WCell.Core.Paths.PathQuery)">
+            <summary>
+            Asynchronously queries the shortest path between the given two points and calls the callback upon return.
+            Might be executed synchronously.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Terrain.ITerrain.GetGroundHeightUnderneath(WCell.Util.Graphics.Vector3)">
+            <summary>
+            Returns the height of the terrain right underneath the given worldPos.
+            Returns worldPos.Z if it could not reliably determine the height.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Terrain.ITerrain.ForceLoadTile(System.Int32,System.Int32)">
+            <summary>
+            Forces loading of tile. This must be used as it is a long process and will use a lot of resources.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Timers.IUpdatable">
+            <summary>
+            Defines the interface of an object that can be updated with respect to time.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Timers.IUpdatable.Update(System.Int32)">
+            <summary>
+            Updates the object.
+            </summary>
+            <param name="dt">the time since the last update in millis</param>
+        </member>
+        <member name="T:WCell.Core.Timers.SimpleUpdatable">
+            <summary>
+            A simple wrapper that will execute a callback every time it is updated.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Timers.SimpleUpdatable.#ctor">
+            <summary>
+            Creates a new <see cref="T:WCell.Core.Timers.SimpleUpdatable" /> object.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Timers.SimpleUpdatable.#ctor(System.Action)">
+            <summary>
+            Creates a new <see cref="T:WCell.Core.Timers.SimpleUpdatable" /> object with the given callback.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Timers.SimpleUpdatable.Callback">
+            <summary>
+            The wrapped callback.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Timers.SimpleTimerEntry">
+            <summary>
+            New even more lightweight Timer class to replace the old TimerEntry class
+            </summary>
+        </member>
+        <member name="F:WCell.Core.Timers.SimpleTimerEntry.IsOneShot">
+            <summary>
+            Whether this is a one-shot timer
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Timers.TimerEntry">
+            <summary>
+            Lightweight timer object that supports one-shot or repeated firing.
+            </summary>
+            <remarks>This timer is not standalone, and must be driven via the <see cref="T:WCell.Core.Timers.IUpdatable" /> interface.</remarks>
+        </member>
+        <member name="M:WCell.Core.Timers.TimerEntry.#ctor(System.Int32,System.Int32,System.Action{System.Int32})">
+            <summary>
+            Creates a new timer with the given start delay, interval, and callback.
+            </summary>
+            <param name="delay">the delay before firing initially</param>
+            <param name="intervalMillis">the interval between firing</param>
+            <param name="callback">the callback to fire</param>
+        </member>
+        <member name="P:WCell.Core.Timers.TimerEntry.MillisSinceLastTick">
+            <summary>
+            The amount of time in milliseconds that elapsed between the last timer tick and the last update.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Timers.TimerEntry.Start">
+            <summary>
+            Starts the timer.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Timers.TimerEntry.Start(System.Int32)">
+            <summary>
+            Starts the timer with the given delay.
+            </summary>
+            <param name="initialDelay">the delay before firing initially</param>
+        </member>
+        <member name="M:WCell.Core.Timers.TimerEntry.Start(System.Int32,System.Int32)">
+            <summary>
+            Starts the time with the given delay and interval.
+            </summary>
+            <param name="initialDelay">the delay before firing initially</param>
+            <param name="interval">the interval between firing</param>
+        </member>
+        <member name="P:WCell.Core.Timers.TimerEntry.IsRunning">
+            <summary>
+            Whether or not the timer is running.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Timers.TimerEntry.Stop">
+            <summary>
+            Stops the timer.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.Timers.TimerEntry.Update(System.Int32)">
+            <summary>
+            Updates the timer, firing the callback if enough time has elapsed.
+            </summary>
+            <param name="dtMillis">the time change since the last update</param>
+        </member>
+        <member name="M:WCell.Core.Timers.TimerEntry.Dispose">
+            <summary>
+            Stops and cleans up the timer.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.WCellConstants.RealmServerUpdateInterval">
+            <summary>
+            The delay for every RealmServer to send updates to the AuthServer.
+            If the AuthServer didn't receive an Update after this * 1.5, the Realm is considered offline.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.WCellConstants.ROOT_PATH">
+            <summary>
+            Root path of the server binaries
+            </summary>
+        </member>
+        <member name="T:WCell.Core.AppConfig">
+            <summary>
+            Defines a configuration made up of key/value values
+            </summary>
+        </member>
+        <member name="P:WCell.Core.AppConfig.SaveOnChange">
+            <summary>
+            Whether to save after adding/changing values
+            </summary>
+        </member>
+        <member name="M:WCell.Core.AppConfig.#ctor(System.String)">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="executablePath">The path of the executable whose App-config to load</param>
+        </member>
+        <member name="M:WCell.Core.AppConfig.LoadConfigDefaults">
+            <summary>
+            Loads default values in the configuration if they don't already exist
+            </summary>
+        </member>
+        <member name="M:WCell.Core.AppConfig.CreateValue(System.String,System.Object)">
+            <summary>
+            Creates a config entry with the supplied value if one doesn't already exist
+            </summary>
+            <param name="key">the key</param>
+            <param name="value">the value</param>
+        </member>
+        <member name="M:WCell.Core.AppConfig.GetEnumerator">
+            <summary>
+            Get an enumerator that represents the key/value pairs of this configuration
+            </summary>
+            <returns>an IEnumerator object to enumerate through this configuration</returns>
+        </member>
+        <member name="M:WCell.Core.DBC.DBCRecordConverter.CopyTo(System.Byte[],System.Int32,System.Int32,System.Object,System.Int32)">
+            <summary>
+            Copies the next count fields into obj, starting from offset.
+            Keep in mind, that one field has a length of 4 bytes.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.DBC.MapInfo">
+            <summary>
+            Represents an entry in Map.dbc
+            </summary>
+        </member>
+        <member name="F:WCell.Core.DBC.MapInfo.RaidResetTimer">
+            <summary>
+            In seconds
+            </summary>
+        </member>
+        <member name="F:WCell.Core.DBC.MapInfo.HeroicResetTimer">
+            <summary>
+            In seconds
+            </summary>
+        </member>
+        <member name="F:WCell.Core.HighId.Item">
+            <summary>
+            Or Container
+            </summary>
+        </member>
+        <member name="F:WCell.Core.HighGuidType.NoEntry">
+            <summary>
+            Also Player, Corpse, or DynamicObject
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Singleton`1">
+            <summary>
+            Generic Singleton class implementing the Singleton design pattern in a thread safe and lazy way.
+            </summary>
+            <remarks>
+            Thread safe and lazy implementation of the Singleton pattern based on the fifth reference implementation
+            found in: http://www.yoda.arachsys.com/csharp/singleton.html
+            This class uses Reflection to solve a limitation in the generics pattern to allocate the T type.
+            If the T Type has a public constructor it will throw an exception and wont allow to create the Singleton.
+            </remarks>
+            <typeparam name="T">The Type that you want to retrieve an unique instance</typeparam>
+        </member>
+        <member name="P:WCell.Core.Singleton`1.Instance">
+            <summary>
+            Returns the singleton instance.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.ClientInformation">
+            <summary>
+            Describes basic system information about a client, 
+            including architecture, OS, and locale.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ClientInformation.Version">
+            <summary>
+            The game client version of the client.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ClientInformation.ProtocolVersion">
+            <summary>
+            The game client version of the client.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ClientInformation.ClientInstallationType">
+            <summary>
+            The type of client that is attempting to connect.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ClientInformation.OS">
+            <summary>
+            The operating system of the client.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ClientInformation.Architecture">
+            <summary>
+            The CPU architecture of the client.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ClientInformation.Locale">
+            <summary>
+            The location and native language of the client.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ClientInformation.TimeZone">
+            <summary>
+            The timezone of the client.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.ClientInformation.IPAddress">
+            <summary>
+            The IP address of the client.
+            Not really trustworthy.
+            </summary>
+            <remarks>This is serializable.</remarks>
+        </member>
+        <member name="M:WCell.Core.ClientInformation.ReadFromPacket(WCell.Core.Network.PacketIn)">
+            <summary>
+            Generates a system information objet from the given packet.
+            </summary>
+            <param name="inPacket">contains the system information in a raw, serialized format</param>
+        </member>
+        <member name="M:WCell.Core.ClientInformation.Serialize(WCell.Core.ClientInformation)">
+            <summary>
+            Serializes a <see cref="T:WCell.Core.ClientInformation" /> object to a binary representation.
+            </summary>
+            <param name="clientInfo">the client information object</param>
+            <returns>the binary representation of the <see cref="T:WCell.Core.ClientInformation" /> object</returns>
+        </member>
+        <member name="M:WCell.Core.ClientInformation.Deserialize(System.Byte[])">
+            <summary>
+            Deserializes a <see cref="T:WCell.Core.ClientInformation" /> object from its binary representation.
+            </summary>
+            <param name="rawInfoData">the binary data for the <see cref="T:WCell.Core.ClientInformation" /> object</param>
+            <returns>a <see cref="T:WCell.Core.ClientInformation" /> object</returns>
+        </member>
+        <member name="T:WCell.Core.Localization.Resources">
+            <summary>
+            Wrapper for auto-generated resource class. This allows the the strongly-typed
+            resources to be auto-generated, while this class ensures there will always be 
+            'Resources' type available to call.
+            </summary>
+        </member>
+        <member name="T:WCell.Core.Localization.WCell_Core">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.Auth_Logon_with_invalid_length">
+            <summary>
+              Looks up a localized string similar to Client attempting login sent AUTH_LOGON_CHALLENGE remaining length as {0}, however {1} bytes are remaining.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.CheckingForDatabase">
+            <summary>
+              Looks up a localized string similar to Checking for {0} database.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ClientInformationFourCCs">
+            <summary>
+              Looks up a localized string similar to ProtocolVersion: {0} ClientType: {1} Version: {2} Architecture: {3} OS: {4} Locale: {5} TimeZone: {6} IP: {7}.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.DatabaseConnectionFailure">
+            <summary>
+              Looks up a localized string similar to Couldn&apos;t connect to database server.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.DatabaseDoesNotExist">
+            <summary>
+              Looks up a localized string similar to {0} database does not exist, creating.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.DBCreateFailed">
+            <summary>
+              Looks up a localized string similar to Failed to create the neccessary database!.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.DBScriptNotFound">
+            <summary>
+              Looks up a localized string similar to Couldn&apos;t load the DB script file!.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.FatalUnhandledException">
+            <summary>
+              Looks up a localized string similar to A fatal, unhandled exception was encountered!.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.HandlerAlreadyRegistered">
+            <summary>
+              Looks up a localized string similar to The PacketHandler for Packet {0} &apos;{1}&apos; has been overridden with &apos;{2}&apos;!.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.InitComplete">
+            <summary>
+              Looks up a localized string similar to Initialization complete! {0} successful steps, {1} non-fatal failures..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.InitFailed">
+            <summary>
+              Looks up a localized string similar to Failed to fully process all required initialization steps!.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.InitializingDatabase">
+            <summary>
+              Looks up a localized string similar to Initializing database.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.InitPass">
+            <summary>
+              Looks up a localized string similar to Initialization Pass #{0}.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.InitStepFailed">
+            <summary>
+              Looks up a localized string similar to Step &apos;{0}&apos; ({1}) failed to finish{2}.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.InitStepsLoaded">
+            <summary>
+              Looks up a localized string similar to Found and loaded {0} {1}!.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.InitStepSucceeded">
+            <summary>
+              Looks up a localized string similar to Step:  &apos;{0}&apos; ({1}).
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.InitStepWasRequired">
+            <summary>
+              Looks up a localized string similar to Step &apos;{0}&apos; ({1}) was required to proceed; stopping!.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.InvalidHandlerMethodSignature">
+            <summary>
+              Looks up a localized string similar to Cannot create packet handler delegate from method &apos;{0}&apos;: invalid method signature!.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.IOPoolSlowdown">
+            <summary>
+              Looks up a localized string similar to IO task pool experiencing slowdowns..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.KeyNotFound">
+            <summary>
+              Looks up a localized string similar to The key &apos;{0}&apos; was not found in the configuration file!.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerInternalRestartFailed">
+            <summary>
+              Looks up a localized string similar to Manager: {0}, internal restart failed..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerInternalStartFailed">
+            <summary>
+              Looks up a localized string similar to Manager: {0}, internal start failed..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerInternalStopFailed">
+            <summary>
+              Looks up a localized string similar to Manager: {0}, internal stop failed..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerRestarted">
+            <summary>
+              Looks up a localized string similar to Manager: {0}, has succesfully restarted..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerRestartFailed">
+            <summary>
+              Looks up a localized string similar to Manager: {0}, restart failed..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerRestarting">
+            <summary>
+              Looks up a localized string similar to Restarting Manager: {0}.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerStarted">
+            <summary>
+              Looks up a localized string similar to Manager: {0}, has succesfully started..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerStartFailed">
+            <summary>
+              Looks up a localized string similar to Manager: {0}, start failed..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerStarting">
+            <summary>
+              Looks up a localized string similar to Starting Manager: {0}.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerStopFailed">
+            <summary>
+              Looks up a localized string similar to Manager: {0}, stop failed..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerStopped">
+            <summary>
+              Looks up a localized string similar to Manager: {0}, has succesfully stopped..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerStopping">
+            <summary>
+              Looks up a localized string similar to Stopping Manager: {0}.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ManagerThrownError">
+            <summary>
+              Looks up a localized string similar to Manager: {0}, has thrown an error: {1}.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.MissingSqlScript">
+            <summary>
+              Looks up a localized string similar to Missing database schema file, ensure you have a {0} file in your server folder.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.NetworkPoolSlowdown">
+            <summary>
+              Looks up a localized string similar to Network task pool experiencing slowdowns..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.NullStream">
+            <summary>
+              Looks up a localized string similar to GetResourceStream returned a null stream (file not found).
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.PerformingNextInitStep">
+            <summary>
+              Looks up a localized string similar to Performing next step: &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ProcessExited">
+            <summary>
+              Looks up a localized string similar to Server has been shutdown..
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.RunningSqlScript">
+            <summary>
+              Looks up a localized string similar to Running {0}.
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ServerStarting">
+            <summary>
+              Looks up a localized string similar to Starting server....
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.ServerStopping">
+            <summary>
+              Looks up a localized string similar to Stopping server....
+            </summary>
+        </member>
+        <member name="P:WCell.Core.Localization.WCell_Core.UnhandledPacket">
+            <summary>
+              Looks up a localized string similar to Unhandled packet {0} ({1}), Size: {2} bytes.
+            </summary>
+        </member>
+        <member name="M:WCell.Core.WCellUtil.ToHex(WCell.Core.Network.PacketId,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Dumps the array to string form, using hexadecimal as the formatter
+            </summary>
+            <returns>hexadecimal representation of the data parsed</returns>
+        </member>
+        <member name="F:WCell.Core.WDB.CreatureCache.Type">
+            <summary>
+            CreatureType.dbc
+            </summary>
+        </member>
+        <member name="F:WCell.Core.WDB.CreatureCache.Family">
+            <summary>
+            CreatureFamily.dbc
+            </summary>
+        </member>
+        <member name="F:WCell.Core.WDB.CreatureCache.CreatureRelation1">
+            <summary>
+            Link creature to another creature that is required for a quest.
+            </summary>
+        </member>
+        <member name="F:WCell.Core.WDB.CreatureCache.MaleDisplayId">
+            <summary>
+            CreatureDisplayInfo.dbc
+            </summary>
+        </member>
+        <member name="F:WCell.Core.WDB.CreatureCache.FemaleDisplayId">
+            <summary>
+            CreatureDisplayInfo.dbc
+            </summary>
+        </member>
+        <member name="F:WCell.Core.WDB.CreatureCache.DisplayId3">
+            <summary>
+            CreatureDisplayInfo.dbc
+            </summary>
+        </member>
+        <member name="F:WCell.Core.WDB.CreatureCache.DisplayId4">
+            <summary>
+            CreatureDisplayInfo.dbc
+            </summary>
+        </member>
+        <member name="F:WCell.Core.WDB.CreatureCache.MovementInfo">
+            <summary>
+            CreatureMovementInfo.dbc
+            </summary>
+        </member>
+        <member name="T:WCell.RealmServer.Database.NHIdGenerator">
+            <summary>
+            Gives out next Primary Key for a table with assigned Primary Keys
+            </summary>
+        </member>
+        <member name="T:WCell.RealmServer.RealmPacketIn">
+            <summary>
+            Reads data from incoming packet stream, targetted specifically for the realm server
+            </summary>
+        </member>
+        <member name="M:WCell.RealmServer.RealmPacketIn.#ctor(Cell.Core.BufferSegment,System.Int32,System.Int32,WCell.Constants.RealmServerOpCode,System.Int32)">
+            <summary>
+            Constructs a RealmPacketIn object given the buffer to read, the offset to read from, and the number of bytes to read.
+            Do not use this, unless you have a BufferManager that ensures the BufferWrapper's content to be pinned. 
+            For self-managed RealmPackets, use <c>DisposableRealmPacketIn</c>.
+            </summary>
+            <param name="segment">buffer container to read from</param>
+            <param name="offset">offset to read from relative to the segment offset</param>
+            <param name="length">number of bytes to read</param>
+            <param name="opcode">the opcode of this packet</param>
+        </member>
+        <member name="M:WCell.RealmServer.RealmPacketIn.Copy">
+            <summary>
+            Make sure to Dispose the copied packet!
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WCell.AuthServer.AuthPacketIn">
+            <summary>
+            Represents an inbound packet from the client.
+            </summary>
+        </member>
+        <member name="F:WCell.AuthServer.AuthPacketIn._headerSize">
+            <summary>
+            Constant indicating this <c>AuthPacketIn</c> header size.
+            </summary>
+        </member>
+        <member name="P:WCell.AuthServer.AuthPacketIn.HeaderSize">
+            <summary>
+            The <c>AuthPacketOut</c> header size.
+            </summary>
+        </member>
+        <member name="M:WCell.AuthServer.AuthPacketIn.#ctor(Cell.Core.BufferSegment,System.Int32)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="length">the length of bytes to read</param>
+        </member>
+        <member name="M:WCell.AuthServer.AuthPacketIn.#ctor(Cell.Core.BufferSegment,System.Int32,System.Int32)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="offset">the zero-based index to read from</param>
+            <param name="length">the length of bytes to read</param>
+        </member>
+        <member name="T:WCell.AuthServer.AuthPacketOut">
+            <summary>
+            Represents an outbound packet going to the client.
+            </summary>
+        </member>
+        <member name="F:WCell.AuthServer.AuthPacketOut._headerSize">
+            <summary>
+            Constant indicating this <c>AuthPacketOut</c> header size.
+            </summary>
+        </member>
+        <member name="P:WCell.AuthServer.AuthPacketOut.HeaderSize">
+            <summary>
+            The <c>AuthPacketOut</c> header size.
+            </summary>
+        </member>
+        <member name="P:WCell.AuthServer.AuthPacketOut.OpCode">
+            <summary>
+            The op-code of this packet.
+            </summary>
+        </member>
+        <member name="M:WCell.AuthServer.AuthPacketOut.#ctor(WCell.Constants.AuthServerOpCode)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="packetOpCode">the opcode of the packet</param>
+        </member>
+        <member name="M:ObjectCopier.Clone``1(``0)">
+            <summary>
+            Perform a deep Copy of the object.
+            </summary>
+            <typeparam name="T">The type of object being copied.</typeparam>
+            <param name="source">The object instance to copy.</param>
+            <returns>The copied object.</returns>
+        </member>
+    </members>
+</doc>

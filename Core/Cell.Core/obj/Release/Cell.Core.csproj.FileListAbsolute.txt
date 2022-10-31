@@ -1,0 +1,2 @@
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\Cell.Core\obj\Release\Cell.Core.Localization.Cell.Core.resources
+C:\Users\o_malkov\Documents\voobrazilia\Server\Core\Cell.Core\obj\Release\Cell.Core.csproj.GenerateResource.Cache

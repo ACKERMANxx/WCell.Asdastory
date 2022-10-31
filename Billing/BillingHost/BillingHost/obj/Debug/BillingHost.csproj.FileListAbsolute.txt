@@ -1,0 +1,14 @@
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\BillingHost.exe.config
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\BillingHost.exe
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\BillingHost.pdb
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\Nancy.dll
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\Nancy.Hosting.Self.dll
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\obj\Debug\BillingHost.csprojResolveAssemblyReference.cache
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\obj\Debug\BillingHost.exe
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\obj\Debug\BillingHost.pdb
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\EntityFramework.dll
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\EntityFramework.xml
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\Scripts\angular.js
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\Scripts\app.js
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\Scripts\ui-bootstrap-tpls-0.4.0.js
+C:\Users\o_malkov\Documents\voobrazilia\Server\Billing\BillingHost\BillingHost\bin\Debug\Views\ApplyDonation.html

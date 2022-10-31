@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="asda2x100ModelStoreContainer" CdmEntityContainer="asda2x100Entities">
+    <EntitySetMapping Name="donations">
+      <EntityTypeMapping TypeName="asda2x100Model.donations">
+        <MappingFragment StoreEntitySet="donations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Wallet" ColumnName="Wallet" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CharacterName" ColumnName="CharacterName" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="IsDelivered" ColumnName="IsDelivered" />
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="DeliveredDateTime" ColumnName="DeliveredDateTime" />
+          <ScalarProperty Name="PayerName" ColumnName="PayerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="characterrecord">
+      <EntityTypeMapping TypeName="asda2x100Model.characterrecord">
+        <MappingFragment StoreEntitySet="characterrecord">
+          <ScalarProperty Name="RebornCount" ColumnName="RebornCount" />
+          <ScalarProperty Name="Asda2HonorPoints" ColumnName="Asda2HonorPoints" />
+          <ScalarProperty Name="WarehousePassword" ColumnName="WarehousePassword" />
+          <ScalarProperty Name="PremiumAvatarWarehouseBagsCount" ColumnName="PremiumAvatarWarehouseBagsCount" />
+          <ScalarProperty Name="PremiumWarehouseBagsCount" ColumnName="PremiumWarehouseBagsCount" />
+          <ScalarProperty Name="BanPoints" ColumnName="BanPoints" />
+          <ScalarProperty Name="CraftingExp" ColumnName="CraftingExp" />
+          <ScalarProperty Name="CraftingLevel" ColumnName="CraftingLevel" />
+          <ScalarProperty Name="MaxRepipesCount" ColumnName="MaxRepipesCount" />
+          <ScalarProperty Name="PostTitleId" ColumnName="PostTitleId" />
+          <ScalarProperty Name="PreTitleId" ColumnName="PreTitleId" />
+          <ScalarProperty Name="GuildPoints" ColumnName="GuildPoints" />
+          <ScalarProperty Name="Asda2FactionId" ColumnName="Asda2FactionId" />
+          <ScalarProperty Name="SettingsFlags" ColumnName="SettingsFlags" />
+          <ScalarProperty Name="AvatarMask" ColumnName="AvatarMask" />
+          <ScalarProperty Name="FishingLevel" ColumnName="FishingLevel" />
+          <ScalarProperty Name="LearnedRecipes" ColumnName="LearnedRecipes" />
+          <ScalarProperty Name="GetedTitles" ColumnName="GetedTitles" />
+          <ScalarProperty Name="DiscoveredTitles" ColumnName="DiscoveredTitles" />
+          <ScalarProperty Name="GlobalChatColorDb" ColumnName="GlobalChatColorDb" />
+          <ScalarProperty Name="FreeStatPoints" ColumnName="FreeStatPoints" />
+          <ScalarProperty Name="BaseLuck" ColumnName="BaseLuck" />
+          <ScalarProperty Name="EyesColor" ColumnName="EyesColor" />
+          <ScalarProperty Name="Asda2Class" ColumnName="Asda2Class" />
+          <ScalarProperty Name="Zodiac" ColumnName="Zodiac" />
+          <ScalarProperty Name="CharNum" ColumnName="CharNum" />
+          <ScalarProperty Name="BattlegroundTeam" ColumnName="BattlegroundTeam" />
+          <ScalarProperty Name="RaidDifficulty" ColumnName="RaidDifficulty" />
+          <ScalarProperty Name="DungeonDifficulty" ColumnName="DungeonDifficulty" />
+          <ScalarProperty Name="LastTalentResetTime" ColumnName="LastTalentResetTime" />
+          <ScalarProperty Name="PetDuration" ColumnName="PetDuration" />
+          <ScalarProperty Name="PrivatePerLevelItemBonusTemplateId" ColumnName="PrivatePerLevelItemBonusTemplateId" />
+          <ScalarProperty Name="PetPower" ColumnName="PetPower" />
+          <ScalarProperty Name="PetHealth" ColumnName="PetHealth" />
+          <ScalarProperty Name="PetCount" ColumnName="PetCount" />
+          <ScalarProperty Name="PetSummonedCount" ColumnName="PetSummonedCount" />
+          <ScalarProperty Name="StableSlotCount" ColumnName="StableSlotCount" />
+          <ScalarProperty Name="IsPetActive" ColumnName="IsPetActive" />
+          <ScalarProperty Name="TaxiMask" ColumnName="TaxiMask" />
+          <ScalarProperty Name="NextTaxiVertexId" ColumnName="NextTaxiVertexId" />
+          <ScalarProperty Name="RestTriggerId" ColumnName="RestTriggerId" />
+          <ScalarProperty Name="RestXp" ColumnName="RestXp" />
+          <ScalarProperty Name="FinishedDailyQuests" ColumnName="FinishedDailyQuests" />
+          <ScalarProperty Name="FinishedQuests" ColumnName="FinishedQuests" />
+          <ScalarProperty Name="MountBoxExpands" ColumnName="MountBoxExpands" />
+          <ScalarProperty Name="PetBoxEnchants" ColumnName="PetBoxEnchants" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="BasePower" ColumnName="BasePower" />
+          <ScalarProperty Name="Power" ColumnName="Power" />
+          <ScalarProperty Name="BaseHealth" ColumnName="BaseHealth" />
+          <ScalarProperty Name="Health" ColumnName="Health" />
+          <ScalarProperty Name="ProfessionLevel" ColumnName="ProfessionLevel" />
+          <ScalarProperty Name="GodMode" ColumnName="GodMode" />
+          <ScalarProperty Name="BaseAgility" ColumnName="BaseAgility" />
+          <ScalarProperty Name="BaseIntellect" ColumnName="BaseIntellect" />
+          <ScalarProperty Name="BaseSpirit" ColumnName="BaseSpirit" />
+          <ScalarProperty Name="BaseStamina" ColumnName="BaseStamina" />
+          <ScalarProperty Name="BaseStrength" ColumnName="BaseStrength" />
+          <ScalarProperty Name="RuneCooldowns" ColumnName="RuneCooldowns" />
+          <ScalarProperty Name="RuneSetMask" ColumnName="RuneSetMask" />
+          <ScalarProperty Name="BindZ" ColumnName="BindZ" />
+          <ScalarProperty Name="BindY" ColumnName="BindY" />
+          <ScalarProperty Name="BindX" ColumnName="BindX" />
+          <ScalarProperty Name="CorpseO" ColumnName="CorpseO" />
+          <ScalarProperty Name="CorpseZ" ColumnName="CorpseZ" />
+          <ScalarProperty Name="CorpseY" ColumnName="CorpseY" />
+          <ScalarProperty Name="CorpseX" ColumnName="CorpseX" />
+          <ScalarProperty Name="Orientation" ColumnName="Orientation" />
+          <ScalarProperty Name="PositionZ" ColumnName="PositionZ" />
+          <ScalarProperty Name="PositionY" ColumnName="PositionY" />
+          <ScalarProperty Name="PositionX" ColumnName="PositionX" />
+          <ScalarProperty Name="ExploredZones" ColumnName="ExploredZones" />
+          <ScalarProperty Name="TutorialFlags" ColumnName="TutorialFlags" />
+          <ScalarProperty Name="LevelPlayTime" ColumnName="LevelPlayTime" />
+          <ScalarProperty Name="TotalPlayTime" ColumnName="TotalPlayTime" />
+          <ScalarProperty Name="Xp" ColumnName="Xp" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Outfit" ColumnName="Outfit" />
+          <ScalarProperty Name="FacialHair" ColumnName="FacialHair" />
+          <ScalarProperty Name="HairColor" ColumnName="HairColor" />
+          <ScalarProperty Name="HairStyle" ColumnName="HairStyle" />
+          <ScalarProperty Name="face" ColumnName="face" />
+          <ScalarProperty Name="Skin" ColumnName="Skin" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Race" ColumnName="Race" />
+          <ScalarProperty Name="CharacterFlags" ColumnName="CharacterFlags" />
+          <ScalarProperty Name="LastLogout" ColumnName="LastLogout" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="ArenaPoints" ColumnName="ArenaPoints" />
+          <ScalarProperty Name="HonorPoints" ColumnName="HonorPoints" />
+          <ScalarProperty Name="LifetimeHonorableKills" ColumnName="LifetimeHonorableKills" />
+          <ScalarProperty Name="HonorYesterday" ColumnName="HonorYesterday" />
+          <ScalarProperty Name="HonorToday" ColumnName="HonorToday" />
+          <ScalarProperty Name="KillsTotal" ColumnName="KillsTotal" />
+          <ScalarProperty Name="TalentResetPriceTier" ColumnName="TalentResetPriceTier" />
+          <ScalarProperty Name="PetEntryId" ColumnName="PetEntryId" />
+          <ScalarProperty Name="SummonSpell" ColumnName="SummonSpell" />
+          <ScalarProperty Name="GuildId" ColumnName="GuildId" />
+          <ScalarProperty Name="BindMap" ColumnName="BindMap" />
+          <ScalarProperty Name="BindZone" ColumnName="BindZone" />
+          <ScalarProperty Name="Zone" ColumnName="Zone" />
+          <ScalarProperty Name="CorpseMap" ColumnName="CorpseMap" />
+          <ScalarProperty Name="Map" ColumnName="Map" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="WatchedFaction" ColumnName="WatchedFaction" />
+          <ScalarProperty Name="DisplayId" ColumnName="DisplayId" />
+          <ScalarProperty Name="EntityLowId" ColumnName="EntityLowId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

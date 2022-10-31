@@ -1,0 +1,261 @@
+(2020-05-01 19:21:51.3161) [Fatal] A fatal, unhandled exception was encountered! 
+(2020-05-01 19:21:51.3356) [Fatal] LogStacktrace at offset 82 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:190:4
+	LogException at offset 188 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:155:5
+	FatalException at offset 88 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:142:4
+	FatalException at offset 47 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:132:4
+	<.ctor>b__11_0 at offset 108 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\WCell.Core\ServerApp.cs:56:23
+	<AuthChallengeRequestCallback>b__1 at offset 551 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Auth\AuthenticationHandler.cs:134:45
+	ThreadStart_Context at offset 161 in file:line:column <filename unknown>:0:0
+	RunInternal at offset 196 in file:line:column <filename unknown>:0:0
+	Run at offset 23 in file:line:column <filename unknown>:0:0
+	Run at offset 68 in file:line:column <filename unknown>:0:0
+	ThreadStart at offset 71 in file:line:column <filename unknown>:0:0 
+(2020-05-01 19:21:51.3356) [Fatal]  
+(2020-05-01 19:21:51.3356) [Fatal] System.NullReferenceException: Object reference not set to an instance of an object.
+   at WCell.RealmServer.Auth.AuthenticationHandler.<>c__DisplayClass10_1.<AuthChallengeRequestCallback>b__1() in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Auth\AuthenticationHandler.cs:line 134
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart() 
+(2020-05-01 19:21:51.3356) [Fatal]  
+(2020-05-01 19:21:51.3356) [Fatal] Asda Story ME! - ACell RealmServer (v0.5.0.0)) - Debug 
+(2020-05-01 19:21:51.3356) [Fatal] OS: Microsoft Windows NT 6.2.9200.0 - CLR: 4.0.30319.42000 
+(2020-05-01 19:21:51.3356) [Fatal] Using: MySQL5Dialect 
+(2020-05-01 19:21:51.3356) [Fatal]  
+(2020-05-01 19:21:51.3356) [Fatal] Object reference not set to an instance of an object. 
+(2020-05-01 19:24:20.1743) [Fatal] A fatal, unhandled exception was encountered! 
+(2020-05-01 19:24:20.1860) [Fatal] LogStacktrace at offset 82 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:190:4
+	LogException at offset 188 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:155:5
+	FatalException at offset 88 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:142:4
+	FatalException at offset 47 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:132:4
+	<.ctor>b__11_0 at offset 108 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\WCell.Core\ServerApp.cs:56:23
+	<AuthChallengeRequestCallback>b__1 at offset 551 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Auth\AuthenticationHandler.cs:134:45
+	ThreadStart_Context at offset 161 in file:line:column <filename unknown>:0:0
+	RunInternal at offset 196 in file:line:column <filename unknown>:0:0
+	Run at offset 23 in file:line:column <filename unknown>:0:0
+	Run at offset 68 in file:line:column <filename unknown>:0:0
+	ThreadStart at offset 71 in file:line:column <filename unknown>:0:0 
+(2020-05-01 19:24:20.1860) [Fatal]  
+(2020-05-01 19:24:20.1860) [Fatal] System.NullReferenceException: Object reference not set to an instance of an object.
+   at WCell.RealmServer.Auth.AuthenticationHandler.<>c__DisplayClass10_1.<AuthChallengeRequestCallback>b__1() in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Auth\AuthenticationHandler.cs:line 134
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart() 
+(2020-05-01 19:24:20.1860) [Fatal]  
+(2020-05-01 19:24:20.1860) [Fatal] Asda Story ME! - ACell RealmServer (v0.5.0.0)) - Debug 
+(2020-05-01 19:24:20.1860) [Fatal] OS: Microsoft Windows NT 6.2.9200.0 - CLR: 4.0.30319.42000 
+(2020-05-01 19:24:20.1860) [Fatal] Using: MySQL5Dialect 
+(2020-05-01 19:24:20.1860) [Fatal]  
+(2020-05-01 19:24:20.1860) [Fatal] Object reference not set to an instance of an object. 
+(2020-05-02 21:11:36.2437) [Fatal] A fatal, unhandled exception was encountered! 
+(2020-05-02 21:11:36.2437) [Fatal] LogStacktrace at offset 82 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:190:4
+	LogException at offset 188 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:155:5
+	FatalException at offset 87 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:142:4
+	FatalException at offset 47 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:132:4
+	<.ctor>b__11_0 at offset 108 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\WCell.Core\ServerApp.cs:56:23
+	GetMallPoints at offset 242 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:36:13
+	<SendPointsRefreshedResponse>b__0 at offset 132 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:1699:17
+	ThreadStart_Context at offset 161 in file:line:column <filename unknown>:0:0
+	RunInternal at offset 196 in file:line:column <filename unknown>:0:0
+	Run at offset 23 in file:line:column <filename unknown>:0:0
+	Run at offset 68 in file:line:column <filename unknown>:0:0
+	ThreadStart at offset 71 in file:line:column <filename unknown>:0:0 
+(2020-05-02 21:11:36.2437) [Fatal]  
+(2020-05-02 21:11:36.2437) [Fatal] System.NullReferenceException: Object reference not set to an instance of an object.
+   at WCell.RealmServer.API.Requests.GetMallPoints(String username, Int32& points) in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:line 36
+   at WCell.RealmServer.Handlers.Asda2InventoryHandler.<>c__DisplayClass66_0.<SendPointsRefreshedResponse>b__0() in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:line 1699
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart() 
+(2020-05-02 21:11:36.2437) [Fatal]  
+(2020-05-02 21:11:36.2437) [Fatal] Asda Story ME! - ACell RealmServer (v0.5.0.0)) - Debug 
+(2020-05-02 21:11:36.2437) [Fatal] OS: Microsoft Windows NT 6.2.9200.0 - CLR: 4.0.30319.42000 
+(2020-05-02 21:11:36.2437) [Fatal] Using: MySQL5Dialect 
+(2020-05-02 21:11:36.2437) [Fatal]  
+(2020-05-02 21:11:36.2437) [Fatal] Object reference not set to an instance of an object. 
+(2020-05-05 15:48:31.8698) [Fatal] A fatal, unhandled exception was encountered! 
+(2020-05-05 15:48:31.9079) [Fatal] LogStacktrace at offset 82 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:190:4
+	LogException at offset 188 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:155:5
+	FatalException at offset 88 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:142:4
+	FatalException at offset 47 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:132:4
+	<.ctor>b__11_0 at offset 108 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\WCell.Core\ServerApp.cs:56:23
+	GetMallPoints at offset 242 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:36:13
+	<SendPointsRefreshedResponse>b__0 at offset 132 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:1699:17
+	ThreadStart_Context at offset 161 in file:line:column <filename unknown>:0:0
+	RunInternal at offset 196 in file:line:column <filename unknown>:0:0
+	Run at offset 23 in file:line:column <filename unknown>:0:0
+	Run at offset 68 in file:line:column <filename unknown>:0:0
+	ThreadStart at offset 71 in file:line:column <filename unknown>:0:0 
+(2020-05-05 15:48:31.9079) [Fatal]  
+(2020-05-05 15:48:31.9079) [Fatal] System.NullReferenceException: Object reference not set to an instance of an object.
+   at WCell.RealmServer.API.Requests.GetMallPoints(String username, Int32& points) in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:line 36
+   at WCell.RealmServer.Handlers.Asda2InventoryHandler.<>c__DisplayClass66_0.<SendPointsRefreshedResponse>b__0() in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:line 1699
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart() 
+(2020-05-05 15:48:31.9079) [Fatal]  
+(2020-05-05 15:48:31.9079) [Fatal] Asda Story ME! - ACell RealmServer (v0.5.0.0)) - Debug 
+(2020-05-05 15:48:31.9079) [Fatal] OS: Microsoft Windows NT 6.2.9200.0 - CLR: 4.0.30319.42000 
+(2020-05-05 15:48:31.9079) [Fatal] Using: MySQL5Dialect 
+(2020-05-05 15:48:31.9079) [Fatal]  
+(2020-05-05 15:48:31.9079) [Fatal] Object reference not set to an instance of an object. 
+(2020-05-06 00:44:01.5537) [Fatal] A fatal, unhandled exception was encountered! 
+(2020-05-06 00:44:01.5537) [Fatal] LogStacktrace at offset 82 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:190:4
+	LogException at offset 188 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:155:5
+	FatalException at offset 87 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:142:4
+	FatalException at offset 47 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:132:4
+	<.ctor>b__11_0 at offset 108 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\WCell.Core\ServerApp.cs:56:23
+	GetMallPoints at offset 242 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:36:13
+	<SendPointsRefreshedResponse>b__0 at offset 132 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:1699:17
+	ThreadStart_Context at offset 161 in file:line:column <filename unknown>:0:0
+	RunInternal at offset 196 in file:line:column <filename unknown>:0:0
+	Run at offset 23 in file:line:column <filename unknown>:0:0
+	Run at offset 68 in file:line:column <filename unknown>:0:0
+	ThreadStart at offset 71 in file:line:column <filename unknown>:0:0 
+(2020-05-06 00:44:01.5537) [Fatal]  
+(2020-05-06 00:44:01.5537) [Fatal] System.NullReferenceException: Object reference not set to an instance of an object.
+   at WCell.RealmServer.API.Requests.GetMallPoints(String username, Int32& points) in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:line 36
+   at WCell.RealmServer.Handlers.Asda2InventoryHandler.<>c__DisplayClass66_0.<SendPointsRefreshedResponse>b__0() in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:line 1699
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart() 
+(2020-05-06 00:44:01.5537) [Fatal]  
+(2020-05-06 00:44:01.5537) [Fatal] Asda Story ME! - ACell RealmServer (v0.5.0.0)) - Debug 
+(2020-05-06 00:44:01.5537) [Fatal] OS: Microsoft Windows NT 6.2.9200.0 - CLR: 4.0.30319.42000 
+(2020-05-06 00:44:01.5537) [Fatal] Using: MySQL5Dialect 
+(2020-05-06 00:44:01.5537) [Fatal]  
+(2020-05-06 00:44:01.5537) [Fatal] Object reference not set to an instance of an object. 
+(2020-05-06 16:56:04.3435) [Fatal] A fatal, unhandled exception was encountered! 
+(2020-05-06 16:56:04.3435) [Fatal] LogStacktrace at offset 82 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:190:4
+	LogException at offset 188 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:155:5
+	FatalException at offset 87 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:142:4
+	FatalException at offset 47 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:132:4
+	<.ctor>b__11_0 at offset 108 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\WCell.Core\ServerApp.cs:56:23
+	GetMallPoints at offset 242 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:36:13
+	<SendPointsRefreshedResponse>b__0 at offset 132 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:1699:17
+	ThreadStart_Context at offset 161 in file:line:column <filename unknown>:0:0
+	RunInternal at offset 196 in file:line:column <filename unknown>:0:0
+	Run at offset 23 in file:line:column <filename unknown>:0:0
+	Run at offset 68 in file:line:column <filename unknown>:0:0
+	ThreadStart at offset 71 in file:line:column <filename unknown>:0:0 
+(2020-05-06 16:56:04.3435) [Fatal]  
+(2020-05-06 16:56:04.3435) [Fatal] System.NullReferenceException: Object reference not set to an instance of an object.
+   at WCell.RealmServer.API.Requests.GetMallPoints(String username, Int32& points) in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:line 36
+   at WCell.RealmServer.Handlers.Asda2InventoryHandler.<>c__DisplayClass66_0.<SendPointsRefreshedResponse>b__0() in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:line 1699
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart() 
+(2020-05-06 16:56:04.3435) [Fatal]  
+(2020-05-06 16:56:04.3435) [Fatal] Asda Story ME! - ACell RealmServer (v0.5.0.0)) - Debug 
+(2020-05-06 16:56:04.3435) [Fatal] OS: Microsoft Windows NT 6.2.9200.0 - CLR: 4.0.30319.42000 
+(2020-05-06 16:56:04.3435) [Fatal] Using: MySQL5Dialect 
+(2020-05-06 16:56:04.3435) [Fatal]  
+(2020-05-06 16:56:04.3435) [Fatal] Object reference not set to an instance of an object. 
+(2020-05-06 17:03:04.7567) [Fatal] A fatal, unhandled exception was encountered! 
+(2020-05-06 17:03:04.7781) [Fatal] LogStacktrace at offset 82 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:190:4
+	LogException at offset 188 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:155:5
+	FatalException at offset 88 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:142:4
+	FatalException at offset 47 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:132:4
+	<.ctor>b__11_0 at offset 108 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\WCell.Core\ServerApp.cs:56:23
+	GetMallPoints at offset 242 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:36:13
+	<SendPointsRefreshedResponse>b__0 at offset 132 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:1699:17
+	ThreadStart_Context at offset 161 in file:line:column <filename unknown>:0:0
+	RunInternal at offset 196 in file:line:column <filename unknown>:0:0
+	Run at offset 23 in file:line:column <filename unknown>:0:0
+	Run at offset 68 in file:line:column <filename unknown>:0:0
+	ThreadStart at offset 71 in file:line:column <filename unknown>:0:0 
+(2020-05-06 17:03:04.7781) [Fatal]  
+(2020-05-06 17:03:04.7781) [Fatal] System.NullReferenceException: Object reference not set to an instance of an object.
+   at WCell.RealmServer.API.Requests.GetMallPoints(String username, Int32& points) in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:line 36
+   at WCell.RealmServer.Handlers.Asda2InventoryHandler.<>c__DisplayClass66_0.<SendPointsRefreshedResponse>b__0() in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:line 1699
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart() 
+(2020-05-06 17:03:04.7781) [Fatal]  
+(2020-05-06 17:03:04.7781) [Fatal] Asda Story ME! - ACell RealmServer (v0.5.0.0)) - Debug 
+(2020-05-06 17:03:04.7781) [Fatal] OS: Microsoft Windows NT 6.2.9200.0 - CLR: 4.0.30319.42000 
+(2020-05-06 17:03:04.7781) [Fatal] Using: MySQL5Dialect 
+(2020-05-06 17:03:04.7781) [Fatal]  
+(2020-05-06 17:03:04.7781) [Fatal] Object reference not set to an instance of an object. 
+(2020-05-06 17:05:00.6316) [Fatal] A fatal, unhandled exception was encountered! 
+(2020-05-06 17:05:00.6512) [Fatal] LogStacktrace at offset 82 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:190:4
+	LogException at offset 188 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:155:5
+	FatalException at offset 88 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:142:4
+	FatalException at offset 47 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Utilities\WCell.Util\NLog\LogUtil.cs:132:4
+	<.ctor>b__11_0 at offset 108 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Core\WCell.Core\ServerApp.cs:56:23
+	GetMallPoints at offset 242 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:36:13
+	<SendPointsRefreshedResponse>b__0 at offset 132 in file:line:column C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:1699:17
+	ThreadStart_Context at offset 161 in file:line:column <filename unknown>:0:0
+	RunInternal at offset 196 in file:line:column <filename unknown>:0:0
+	Run at offset 23 in file:line:column <filename unknown>:0:0
+	Run at offset 68 in file:line:column <filename unknown>:0:0
+	ThreadStart at offset 71 in file:line:column <filename unknown>:0:0 
+(2020-05-06 17:05:00.6512) [Fatal]  
+(2020-05-06 17:05:00.6512) [Fatal] System.NullReferenceException: Object reference not set to an instance of an object.
+   at WCell.RealmServer.API.Requests.GetMallPoints(String username, Int32& points) in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\API\Classes.cs:line 36
+   at WCell.RealmServer.Handlers.Asda2InventoryHandler.<>c__DisplayClass66_0.<SendPointsRefreshedResponse>b__0() in C:\Users\g76j1830\Desktop\AsdaStoryFiles\Services\WCell.RealmServer\Handlers\Asda2InventoryHandler.cs:line 1699
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart() 
+(2020-05-06 17:05:00.6512) [Fatal]  
+(2020-05-06 17:05:00.6512) [Fatal] Asda Story ME! - ACell RealmServer (v0.5.0.0)) - Debug 
+(2020-05-06 17:05:00.6512) [Fatal] OS: Microsoft Windows NT 6.2.9200.0 - CLR: 4.0.30319.42000 
+(2020-05-06 17:05:00.6512) [Fatal] Using: MySQL5Dialect 
+(2020-05-06 17:05:00.6512) [Fatal]  
+(2020-05-06 17:05:00.6512) [Fatal] Object reference not set to an instance of an object. 
+(2021-08-19 22:29:13.5513) [Fatal] Listening endpoint is invalid! Check your configuration and make sure the address and port are valid! Endpoint: 10.172.0.2:5000 
+(2021-08-19 22:29:13.5523) [Fatal] Failed to fully process all required initialization steps! 
+(2021-08-21 10:19:33.6316) [Fatal] Encountered a fatal error while trying to accept a connection. You might have to restart the server. System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at Cell.Core.ArrayBuffer..ctor(BufferManager mgr, Int32 bufferSize) in C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\ArrayBuffer.cs:line 35
+   at Cell.Core.BufferManager.CreateBuffer() in C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\BufferManager.cs:line 242
+   at Cell.Core.BufferManager.CheckOut() in C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\BufferManager.cs:line 183
+   at Cell.Core.ClientBase..ctor(ServerBase server) in C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\ClientBase.cs:line 113
+   at WCell.RealmServer.Network.RealmClient..ctor(RealmServer server) in C:\Users\Administrator\Downloads\Server-Files\Services\WCell.RealmServer\Network\RealmClient.cs:line 128
+   at WCell.RealmServer.RealmServer.CreateClient() in C:\Users\Administrator\Downloads\Server-Files\Services\WCell.RealmServer\RealmServer.cs:line 267
+   at Cell.Core.ServerBase.ProcessAccept(SocketAsyncEventArgs args) in C:\Users\Administrator\Downloads\Server-Files\Core\Cell.Core\ServerBase.cs:line 664
+(2021-08-24 12:36:18.1406) [Fatal] A fatal, unhandled exception was encountered! 
+(2021-08-24 12:36:18.7032) [Fatal] LogStacktrace at offset 82 in file:line:column M:\Server-Files\Utilities\WCell.Util\NLog\LogUtil.cs:190:4
+	LogException at offset 188 in file:line:column M:\Server-Files\Utilities\WCell.Util\NLog\LogUtil.cs:155:5
+	FatalException at offset 88 in file:line:column M:\Server-Files\Utilities\WCell.Util\NLog\LogUtil.cs:142:4
+	FatalException at offset 47 in file:line:column M:\Server-Files\Utilities\WCell.Util\NLog\LogUtil.cs:132:4
+	<.ctor>b__11_0 at offset 108 in file:line:column M:\Server-Files\Core\WCell.Core\ServerApp.cs:56:23
+	Save at offset 361 in file:line:column M:\Server-Files\Utilities\WCell.Util\Variables\VariableConfiguration.cs:203:4
+	OnShutdown at offset 197 in file:line:column M:\Server-Files\Services\WCell.RealmServer\RealmServer.cs:503:17
+	_OnShutdown at offset 305 in file:line:column M:\Server-Files\Core\WCell.Core\ServerApp.cs:337:4
+	<AddApplicationExitHandler>b__1 at offset 48 in file:line:column M:\Server-Files\Utilities\WCell.Util\AppUtil.cs:111:5 
+(2021-08-24 12:36:18.7032) [Fatal]  
+(2021-08-24 12:36:18.7752) [Fatal] System.Exception: Unable to save Configuration to: M:\Server-Files\Run\Debug\RealmServerConfig.xml ---> System.InvalidOperationException: Collection was modified after the enumerator was instantiated.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Collections.Generic.SortedList`2.SortedListValueEnumerator.MoveNext()
+   at WCell.Util.Strings.StringNode`1.WriteXml(XmlWriter writer) in M:\Server-Files\Utilities\WCell.Util\Strings\StringNode.cs:line 378
+   at WCell.Util.Strings.StringNode`1.WriteXml(XmlWriter writer) in M:\Server-Files\Utilities\WCell.Util\Strings\StringNode.cs:line 382
+   at WCell.Util.Strings.StringNode`1.WriteXml(XmlWriter writer) in M:\Server-Files\Utilities\WCell.Util\Strings\StringNode.cs:line 382
+   at WCell.Util.Variables.VariableConfiguration`1.DoSave() in M:\Server-Files\Utilities\WCell.Util\Variables\VariableConfiguration.cs:line 249
+   at WCell.Util.Variables.VariableConfiguration`1.Save(Boolean backupFirst, Boolean auto) in M:\Server-Files\Utilities\WCell.Util\Variables\VariableConfiguration.cs:line 196
+   --- End of inner exception stack trace ---
+   at WCell.Util.Variables.VariableConfiguration`1.Save(Boolean backupFirst, Boolean auto) in M:\Server-Files\Utilities\WCell.Util\Variables\VariableConfiguration.cs:line 200
+   at WCell.RealmServer.RealmServer.OnShutdown() in M:\Server-Files\Services\WCell.RealmServer\RealmServer.cs:line 503
+   at WCell.Core.ServerApp`1._OnShutdown() in M:\Server-Files\Core\WCell.Core\ServerApp.cs:line 337
+   at WCell.Util.AppUtil.<>c__DisplayClass12_0.<AddApplicationExitHandler>b__1(CtrlTypes type) in M:\Server-Files\Utilities\WCell.Util\AppUtil.cs:line 111 
+(2021-08-24 12:36:18.7752) [Fatal]  
+(2021-08-24 12:36:18.7752) [Fatal] Asda Story ME! - ACell RealmServer (v0.5.0.0)) - Debug 
+(2021-08-24 12:36:18.7752) [Fatal] OS: Microsoft Windows NT 6.2.9200.0 - CLR: 4.0.30319.42000 
+(2021-08-24 12:36:18.7752) [Fatal] Using: <not initialized> 
+(2021-08-24 12:36:18.7752) [Fatal]  
+(2021-08-24 12:36:18.7752) [Fatal] Unable to save Configuration to: M:\Server-Files\Run\Debug\RealmServerConfig.xml
+	Collection was modified after the enumerator was instantiated. 

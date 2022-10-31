@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="asda2x100Model.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="asda2x100ModelStoreContainer">
+    <EntitySet Name="characterrecord" EntityType="asda2x100Model.Store.characterrecord" store:Type="Tables" Schema="asda2x100" />
+    <EntitySet Name="donations" EntityType="asda2x100Model.Store.donations" store:Type="Tables" Schema="asda2x100" />
+  </EntityContainer>
+  <EntityType Name="characterrecord">
+    <Key>
+      <PropertyRef Name="EntityLowId" />
+    </Key>
+    <Property Name="EntityLowId" Type="bigint" Nullable="false" />
+    <Property Name="DisplayId" Type="int" Nullable="false" />
+    <Property Name="WatchedFaction" Type="int" Nullable="false" />
+    <Property Name="ClassId" Type="int" Nullable="false" />
+    <Property Name="Map" Type="int" Nullable="false" />
+    <Property Name="CorpseMap" Type="int" />
+    <Property Name="Zone" Type="int" />
+    <Property Name="BindZone" Type="int" />
+    <Property Name="BindMap" Type="int" Nullable="false" />
+    <Property Name="GuildId" Type="int" />
+    <Property Name="SummonSpell" Type="int" />
+    <Property Name="PetEntryId" Type="int" />
+    <Property Name="TalentResetPriceTier" Type="int" Nullable="false" />
+    <Property Name="KillsTotal" Type="int" Nullable="false" />
+    <Property Name="HonorToday" Type="int" Nullable="false" />
+    <Property Name="HonorYesterday" Type="int" Nullable="false" />
+    <Property Name="LifetimeHonorableKills" Type="int" Nullable="false" />
+    <Property Name="HonorPoints" Type="int" Nullable="false" />
+    <Property Name="ArenaPoints" Type="int" Nullable="false" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="18" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="IsOnline" Type="bool" />
+    <Property Name="LastLogin" Type="datetime" />
+    <Property Name="LastLogout" Type="datetime" />
+    <Property Name="CharacterFlags" Type="int" Nullable="false" />
+    <Property Name="Race" Type="int" Nullable="false" />
+    <Property Name="Gender" Type="int" Nullable="false" />
+    <Property Name="Skin" Type="utinyint" Nullable="false" />
+    <Property Name="face" Type="utinyint" Nullable="false" />
+    <Property Name="HairStyle" Type="utinyint" Nullable="false" />
+    <Property Name="HairColor" Type="utinyint" Nullable="false" />
+    <Property Name="FacialHair" Type="utinyint" Nullable="false" />
+    <Property Name="Outfit" Type="utinyint" Nullable="false" />
+    <Property Name="Level" Type="int" Nullable="false" />
+    <Property Name="Xp" Type="int" />
+    <Property Name="TotalPlayTime" Type="int" Nullable="false" />
+    <Property Name="LevelPlayTime" Type="int" Nullable="false" />
+    <Property Name="TutorialFlags" Type="tinyblob" Nullable="false" />
+    <Property Name="ExploredZones" Type="longblob" />
+    <Property Name="PositionX" Type="float" Nullable="false" />
+    <Property Name="PositionY" Type="float" Nullable="false" />
+    <Property Name="PositionZ" Type="float" Nullable="false" />
+    <Property Name="Orientation" Type="float" Nullable="false" />
+    <Property Name="CorpseX" Type="float" />
+    <Property Name="CorpseY" Type="float" />
+    <Property Name="CorpseZ" Type="float" />
+    <Property Name="CorpseO" Type="float" />
+    <Property Name="BindX" Type="float" Nullable="false" />
+    <Property Name="BindY" Type="float" Nullable="false" />
+    <Property Name="BindZ" Type="float" Nullable="false" />
+    <Property Name="RuneSetMask" Type="int" />
+    <Property Name="RuneCooldowns" Type="longblob" />
+    <Property Name="BaseStrength" Type="int" Nullable="false" />
+    <Property Name="BaseStamina" Type="int" Nullable="false" />
+    <Property Name="BaseSpirit" Type="int" Nullable="false" />
+    <Property Name="BaseIntellect" Type="int" Nullable="false" />
+    <Property Name="BaseAgility" Type="int" Nullable="false" />
+    <Property Name="GodMode" Type="bool" />
+    <Property Name="ProfessionLevel" Type="utinyint" />
+    <Property Name="Health" Type="int" Nullable="false" />
+    <Property Name="BaseHealth" Type="int" Nullable="false" />
+    <Property Name="Power" Type="int" Nullable="false" />
+    <Property Name="BasePower" Type="int" Nullable="false" />
+    <Property Name="Money" Type="bigint" Nullable="false" />
+    <Property Name="PetBoxEnchants" Type="utinyint" Nullable="false" />
+    <Property Name="MountBoxExpands" Type="utinyint" Nullable="false" />
+    <Property Name="FinishedQuests" Type="longblob" />
+    <Property Name="FinishedDailyQuests" Type="longblob" />
+    <Property Name="RestXp" Type="int" />
+    <Property Name="RestTriggerId" Type="int" />
+    <Property Name="NextTaxiVertexId" Type="int" />
+    <Property Name="TaxiMask" Type="longblob" />
+    <Property Name="IsPetActive" Type="bool" />
+    <Property Name="StableSlotCount" Type="int" />
+    <Property Name="PetSummonedCount" Type="int" />
+    <Property Name="PetCount" Type="int" />
+    <Property Name="PetHealth" Type="int" />
+    <Property Name="PetPower" Type="int" />
+    <Property Name="PrivatePerLevelItemBonusTemplateId" Type="int" />
+    <Property Name="PetDuration" Type="int" />
+    <Property Name="LastTalentResetTime" Type="datetime" />
+    <Property Name="DungeonDifficulty" Type="int" />
+    <Property Name="RaidDifficulty" Type="int" />
+    <Property Name="BattlegroundTeam" Type="int" />
+    <Property Name="CharNum" Type="utinyint" Nullable="false" />
+    <Property Name="Zodiac" Type="utinyint" Nullable="false" />
+    <Property Name="Asda2Class" Type="utinyint" />
+    <Property Name="EyesColor" Type="utinyint" />
+    <Property Name="BaseLuck" Type="int" />
+    <Property Name="FreeStatPoints" Type="int" />
+    <Property Name="GlobalChatColorDb" Type="int" />
+    <Property Name="DiscoveredTitles" Type="tinyblob" />
+    <Property Name="GetedTitles" Type="tinyblob" />
+    <Property Name="LearnedRecipes" Type="tinyblob" />
+    <Property Name="FishingLevel" Type="int" />
+    <Property Name="AvatarMask" Type="int" />
+    <Property Name="SettingsFlags" Type="tinyblob" />
+    <Property Name="Asda2FactionId" Type="smallint" />
+    <Property Name="GuildPoints" Type="int" />
+    <Property Name="PreTitleId" Type="smallint" />
+    <Property Name="PostTitleId" Type="smallint" />
+    <Property Name="MaxRepipesCount" Type="utinyint" />
+    <Property Name="CraftingLevel" Type="utinyint" />
+    <Property Name="CraftingExp" Type="float" />
+    <Property Name="BanPoints" Type="int" />
+    <Property Name="PremiumWarehouseBagsCount" Type="utinyint" />
+    <Property Name="PremiumAvatarWarehouseBagsCount" Type="utinyint" />
+    <Property Name="WarehousePassword" Type="varchar" MaxLength="255" />
+    <Property Name="Asda2HonorPoints" Type="int" />
+    <Property Name="RebornCount" Type="int" />
+  </EntityType>
+  <EntityType Name="donations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Wallet" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="CharacterName" Type="tinytext" />
+    <Property Name="TransactionId" Type="bigint" />
+    <Property Name="IsDelivered" Type="bool" Nullable="false" />
+    <Property Name="CreateDateTime" Type="timestamp" Nullable="false" />
+    <Property Name="DeliveredDateTime" Type="timestamp" />
+    <Property Name="PayerName" Type="tinytext" />
+  </EntityType>
+</Schema>
